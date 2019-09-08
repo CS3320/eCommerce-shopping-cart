@@ -1,1 +1,104 @@
-<!--Benjamin Bond-->
+<!DOCTYPE html>
+<html>
+    <header></header>
+    <body>
+        <div class="background">
+            <form action="/submit-user-info">
+                <label> Full Name (100 characters) </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    required
+                    pattern="[A-Za-z]+"
+                    maxlength="100"
+                />
+                <div class="divider"></div>
+
+                <label> Address One </label>
+                <input
+                    type="text"
+                    id="addressOne"
+                    name="addressOne"
+                    required
+                    pattern="[a-zA-Z0-9-]+"
+                    maxlength="100"
+                />
+                <div class="divider"></div>
+
+                <label> Address Two </label>
+                <input
+                    type="text"
+                    id="addressOne"
+                    name="addressOne"
+                    pattern="[a-zA-Z0-9-]+"
+                    maxlength="100"
+                />
+                <div class="divider"></div>
+                <!--Be sure to use Google Maps Javascript API in future iterations of project 
+            https://www.quora.com/How-can-I-create-an-input-field-in-HTML-with-all-the-cities-and-states-->
+                <label> City </label>
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    pattern="[a-zA-Z]+"
+                    required
+                    maxlength="100"
+                />
+                <!--Must be a drop down list in future. Store state codes in database and use AJAX to load in future.-->
+                <div class="divider"></div>
+
+                <label> State </label>
+                <input
+                    type="text"
+                    id="state"
+                    name="state"
+                    pattern="[a-zA-Z]+"
+                    required
+                />
+                <div class="divider"></div>
+
+                <label> Zip Code </label>
+                <input
+                    type="text"
+                    id="zipCode"
+                    name="zipCode"
+                    pattern="[a-zA-Z0-9-]+"
+                    required
+                    minlength="5"
+                    maxlength="9"
+                />
+                <div class="divider"></div>
+
+                <label> Phone </label>
+                <input
+                    title="###-###-####"
+                    type="text"
+                    id="zipCode"
+                    name="zipCode"
+                    pattern="[0-9-]+"
+                    required
+                    maxlength="12"
+                />
+                <div class="divider"></div>
+
+                <label> Email </label>
+                <!--Use both regex and the validation method of type to give error messages.-->
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                    required
+                    maxlength="100"
+                />
+                <div class="divider"></div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+
+    <footer><!--Benjamin Bond--></footer>
+</html>
