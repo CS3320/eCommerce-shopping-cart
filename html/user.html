@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <header></header>
+    <head>
+        <title> User Information </title>
+    </head>
     <body>
         <div class="background">
             <form action="/submit-user-info">
@@ -47,17 +49,11 @@
                     required
                     maxlength="100"
                 />
-                <!--Must be a drop down list in future. Store state codes in database and use AJAX to load in future.-->
                 <div class="divider"></div>
-
+                
+                <!--Store state names in database and use AJAX to load in future.-->
                 <label> State </label>
-                <input
-                    type="text"
-                    id="state"
-                    name="state"
-                    pattern="[a-zA-Z]+"
-                    required
-                />
+                <select id="state" name="states"></select>
                 <div class="divider"></div>
 
                 <label> Zip Code </label>
@@ -72,12 +68,12 @@
                 />
                 <div class="divider"></div>
 
-                <label> Phone </label>
+                <label> Phone Number </label>
                 <input
                     title="###-###-####"
                     type="text"
-                    id="zipCode"
-                    name="zipCode"
+                    id="phoneNumber"
+                    name="phoneNumber"
                     pattern="[0-9-]+"
                     required
                     maxlength="12"
