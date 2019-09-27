@@ -1,9 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-.iframe-container {
-    overflow: hidden;
-    
 
-}
 body{ 
     font-family: 'Lato', sans-serif;
+}
+header{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 5vh;
+}
+iframe {
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.iframe-container {
+    display: block;
+    text-align: center;
+}
+
+#navBar {
+    text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+    display: inline;
+
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+}
+ul {
+    background-color: #FFF;
+}
+.divider {
+    height: 40px;
 }

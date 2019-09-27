@@ -6,6 +6,7 @@
     </head>
     <body>
         <div class="background">
+            <h2> User Information </h2>
             <form action="/submit-user-info">
                 <label> Full Name (100 characters) </label>
 
@@ -54,7 +55,9 @@
                 
                 <!--Store state names in database and use AJAX to load in future.-->
                 <label> State </label>
-                <select id="state" name="states"></select>
+                <select id="state" name="states">
+                    <option value="product1">Product 1</option>
+                </select>
                 <div class="divider"></div>
 
                 <label> Zip Code </label>
