@@ -1,14 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-body{ 
-    font-family: 'Lato', sans-serif;
-}
-header{
-    display: block;
-    margin: 0;
-    padding: 0;
+.header {
+    display: inline-block;
+    padding: 20px;
     width: 100vw;
-    height: 5vh;
+    height: 120px;
+    text-align: center;
+    color: white;
+    background: #1abc9c;
+    font-size: 20px;
+    clear: both;
+}
+h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 3.5em;
+}
+#description {
+    margin: 0;
+}
+/*
+#background-top{
+  background-image: url(../assests/white_stroke.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+*/
+body {
+    font-family: "Lato", sans-serif;
 }
 iframe {
     display: block;
@@ -22,18 +41,16 @@ iframe {
     display: block;
     text-align: center;
 }
-
 #navBar {
     text-align: center;
 }
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 li {
     display: inline;
-
 }
 a {
     text-decoration: none;
@@ -41,7 +58,7 @@ a {
     padding: 8px;
 }
 ul {
-    background-color: #FFF;
+    background-color: #fff;
 }
 .divider {
     height: 40px;
