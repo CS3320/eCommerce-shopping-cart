@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Shipping Information</title>
-  </head>
-  <body>
-    <div class="background">
-      <form action="/shippingInfo">
-        <label> Use Physical Address? </label>
-        <!--use this checkbox to prepoulate data (if checked) in the future-->
-        <input type="checkbox" id="yes" name="yes" />
+    <head>
+        <title>Shipping Information</title>
+        <link rel="stylesheet" href="../css/shipping_information.css" />
+    </head>
+    <body>
+        <div class="background">
+            <h2>Shipping Information</h2>
+            <form action="/shippingInfo">
+                <label> Use Physical Address? </label>
+                <!--use this checkbox to prepoulate data (if checked) in the future-->
+                <input type="checkbox" id="yes" name="yes" />
 
-        <div class="divider"></div>
-        <label> Address One: </label>
-        <input
-          type="text"
-          id="addressOne"
-          name="addressOne"
-          required
-          pattern="[a-zA-Z0-9-]+"
-          maxlength="100"
-        />
+                <div class="divider"></div>
+                <label> Address One: </label>
+                <input
+                    type="text"
+                    id="addressOne"
+                    name="addressOne"
+                    required
+                    pattern="[a-zA-Z0-9-]+"
+                    maxlength="100"
+                />
 
-        <div class="divider"></div>
-        <label> Address Two: </label>
-        <input
-          type="text"
-          id="addressOne"
-          name="addressOne"
-          pattern="[a-zA-Z0-9-]+"
-          maxlength="100"
-        />
+                <div class="divider"></div>
+                <label> Address Two: </label>
+                <input
+                    type="text"
+                    id="addressOne"
+                    name="addressOne"
+                    pattern="[a-zA-Z0-9-]+"
+                    maxlength="100"
+                />
 
-        <div class="divider"></div>
-        <label> City: </label>
-        <input
-          type="text"
-          id="city"
-          name="city"
-          pattern="[a-zA-Z]+"
-          required
-          maxlength="100"
-        />
+                <div class="divider"></div>
+                <label> City: </label>
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    pattern="[a-zA-Z]+"
+                    required
+                    maxlength="100"
+                />
 
-        <div class="divider"></div>
-        <label> State: </label>
-        <!--use AJAX to load databse in the future-->
-        <select>
-          <option value="texas">TX</option>
-        </select>
+                <div class="divider"></div>
+                <label> State: </label>
+                <!--use AJAX to load databse in the future-->
+                <select>
+                    <option value="texas">TX</option>
+                </select>
 
-        <div class="divider"></div>
-        <label> Zip Code: </label>
-        <input
-          type="text"
-          id="zipCode"
-          name="zipCode"
-          pattern="[a-zA-Z0-9-]+"
-          required
-          minlength="5"
-          maxlength="9"
-        />
-        <div class="divider"></div>
+                <div class="divider"></div>
+                <label> Zip Code: </label>
+                <input
+                    type="text"
+                    id="zipCode"
+                    name="zipCode"
+                    pattern="[a-zA-Z0-9-]+"
+                    required
+                    minlength="5"
+                    maxlength="9"
+                />
+                <div class="divider"></div>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </body>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
 
-  <footer><!--Siri Sjoboen--></footer>
+    <footer><!--Siri Sjoboen--></footer>
 </html>

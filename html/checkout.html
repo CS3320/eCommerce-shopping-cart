@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/checkout.css" />
+    </head>
+    <body>
+        <div class="background">
+            <h2>Order Summary</h2>
 
-<body>
+            Items: <br />
+            Shipping & Handling: <br />
+            Total before tax: <br />
+            Estimated tax: <br />
+            ORDER TOTAL: <br />
 
-<h2> Order Summary </h2>
+            <h3>Payment Information</h3>
 
-Items: <br> Shipping & Handling: <br> Total before tax: <br> Estimated tax: <br> ORDER TOTAL: <br>
+            <form>
+                <label for="payment"> Payment Type:</label>
+                <select type="selection" name="payment" id="payment">
+                    <option value="" disabled selected>
+                        Select Payment Type</option
+                    >
+                    <option value="visa"> Visa</option>
+                    <option value="mastercard"> MasterCard</option>
+                    <option value="american express"> American Express</option>
+                    required </select
+                ><br />
 
-<h3> Payment Information</h3>
+                <label for="cardnumber">Card Number:</label>
+                <input
+                    type="text"
+                    name="cardnumber"
+                    id="cardnumber"
+                    placeholder="Card Number"
+                    required
+                /><br />
 
-<form>
-    <label for="payment"> Payment Type:</label>
-    <select type="selection" name="payment" id="payment">
-        <option value="" disabled selected> Select Payment Type</option>
-        <option value="visa"> Visa</option>
-        <option value="mastercard"> MasterCard</option>
-        <option value="american express"> American Express</option>
-        required </select><br>
+                <label for="expiration"> Expiration Date</label>
+                <input
+                    type="date"
+                    name="expiration"
+                    id="expiration"
+                    required
+                /><br />
 
-    <label for="cardnumber">Card Number:</label>
-    <input type="text" name="cardnumber" id="cardnumber" placeholder="Card Number" required><br>
+                <label for="agree"
+                    >I agree and authorize the amount to be charged to my card
+                </label>
+                <input type="checkbox" name="agree" id="agree" required />
+                <br /><br />
 
-    <label for="expiration"> Expiration Date</label>
-    <input type="date" name="expiration" id="expiration" required><br>
-
-    <label for="agree">I agree and authorize the amount to be charged to my card </label>
-    <input type="checkbox" name="agree" id="agree" required> <br><br>
-
-    <button type="button"> Submit Order</button>
-</form>
-</body>
-
+                <button type="button">Submit Order</button>
+            </form>
+        </div>
+    </body>
 </html>
