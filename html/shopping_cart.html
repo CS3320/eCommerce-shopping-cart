@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Shopping Cart</title>
-        <link rel="stylesheet" href="../css/shopping_cart.css" />
-    </head>
-    <body>
-        <div class="background">
-            <h2>Shopping Cart</h2>
-            <form action="/pick-price-and-amount">
-                <label> Select a Product: </label>
-                <!--use AJAX to load databse in the future-->
-                <select>
-                    <option value="product1">Product 1</option>
-                    <option value="product2">Product 2</option>
-                    <option value="product3">Product 3</option>
-                    <option value="product4">Product 4</option>
-                </select>
-                <div class="divider"></div>
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../css/shipping_shopping.css" />
+  </head>
+  <body>
+    <div class="background">
+      <h2>Shopping Cart</h2>
+      <form action="/pick-price-and-amount">
+        <label> Select a Product: </label>
+        <!--use AJAX to load databse in the future-->
+        <select>
+          <option value="product1">Product 1</option>
+          <option value="product2">Product 2</option>
+          <option value="product3">Product 3</option>
+          <option value="product4">Product 4</option>
+        </select>
+        <div class="divider"></div>
 
-                <label> Number of Units: </label>
-                <input
-                    type="number"
-                    id="units"
-                    name="units"
-                    required
-                    min="1"
-                    max="100"
-                />
-                <div class="divider"></div>
+        <label> Number of Units: </label>
+        <input
+          type="number"
+          id="units"
+          name="units"
+          required
+          min="1"
+          max="100"
+        />
+        <div class="divider"></div>
 
-                <label> Unit Price: </label>
-                <!--This is auto-populated in the future-->
-                <input
-                    type="text"
-                    id="price"
-                    name="price"
-                    placeholder="$999"
-                    readonly
-                />
+        <label> Unit Price: </label>
+        <!--This is auto-populated in the future-->
+        <input
+          type="text"
+          id="price"
+          name="price"
+          placeholder="$999"
+          readonly
+        />
 
-                <div class="divider"></div>
+        <div class="divider"></div>
 
-                <label> Total Price: </label>
-                <!--Use Javascript to calculate and populate this field in the future-->
-                <input
-                    type="text"
-                    id="total"
-                    name="total"
-                    placeholder="$999"
-                    readonly
-                />
+        <label> Total Price: </label>
+        <!--Use Javascript to calculate and populate this field in the future-->
+        <input
+          type="text"
+          id="total"
+          name="total"
+          placeholder="$999"
+          readonly
+        />
 
-                <div class="divider"></div>
-                <button type="submit">Checkout</button>
-            </form>
-        </div>
-    </body>
+        <div class="divider"></div>
+        <button type="submit">Checkout</button>
+      </form>
+    </div>
+  </body>
 
-    <footer><!--Siri Sjoboen--></footer>
+  <footer><!--Siri Sjoboen--></footer>
 </html>
