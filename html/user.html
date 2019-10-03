@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>User Information</title>
-        <link rel="stylesheet" href="../css/user.css" />
-    </head>
-    <body>
-        <div class="background">
-            <h2>User Information</h2>
-            <form action="/submit-user-info">
-                <label> Full Name (100 characters) </label>
+  <head>
+    <title>User Information</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div class="background">
+      <h2>User Information</h2>
+      <form action="/submit-user-info">
+        <label> Full Name (100 characters) </label>
+
 
                 <input
                     class="user-input"
@@ -57,13 +58,14 @@
                 />
                 <div class="divider"></div>
 
-                <!--Store state names in database and use AJAX to load in future.-->
-                <label> State </label>
-                <select id="state" name="states">
-                    <option value="texas"> TX </option>
-                </select>
-                <div class="divider"></div>
 
+        <!--Store state names in database and use AJAX to load in future.-->
+        <label> State </label>
+        <select id="state" name="states">
+          <option value="texas"> TX </option>
+        </select>
+        <div class="divider"></div>
+        
                 <label> Zip Code </label>
                 <input
                     class="user-input"
@@ -107,6 +109,5 @@
             </form>
         </div>
     </body>
-
-    <footer><!--Benjamin Bond--></footer>
+  <footer><!--Benjamin Bond--></footer>
 </html>
