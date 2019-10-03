@@ -51,3 +51,11 @@ button {
 div {
   line-height: 200%;
 }
+
+br {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 50%;
+    text-align: right;
+}
