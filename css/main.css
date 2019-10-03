@@ -52,3 +52,24 @@ button {
 div {
   line-height: 200%;
 }
+
+br {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 50%;
+    text-align: right;
+}
+
+ul{
+    list-style-type: none;
+    padding:10px;
+    margin:auto;
+}
+
+li{
+    padding:5px;
+    text-align:center;
+    margin:auto;
+
+}
