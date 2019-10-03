@@ -1,104 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>User Information</title>
-        <link rel="stylesheet" href="../css/user.css" />
-    </head>
-    <body>
-        <div class="background">
-            <h2>User Information</h2>
-            <form action="/submit-user-info">
-                <label> Full Name (100 characters) </label>
+  <head>
+    <title>User Information</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div class="background">
+      <h2>User Information</h2>
+      <form action="/submit-user-info">
+        <label> Full Name (100 characters) </label>
 
-                <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    required
-                    pattern="[A-Za-z]+"
-                    maxlength="100"
-                />
-                <div class="divider"></div>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          required
+          pattern="[A-Za-z]+"
+          maxlength="100"
+        />
+        <div class="divider"></div>
 
-                <label> Address One </label>
-                <input
-                    type="text"
-                    id="addressOne"
-                    name="addressOne"
-                    required
-                    pattern="[a-zA-Z0-9-]+"
-                    maxlength="100"
-                />
-                <div class="divider"></div>
+        <label> Address One </label>
+        <input
+          type="text"
+          id="addressOne"
+          name="addressOne"
+          required
+          pattern="[a-zA-Z0-9-]+"
+          maxlength="100"
+        />
+        <div class="divider"></div>
 
-                <label> Address Two </label>
-                <input
-                    type="text"
-                    id="addressTwo"
-                    name="addressTwo"
-                    pattern="[a-zA-Z0-9-]+"
-                    maxlength="100"
-                />
-                <div class="divider"></div>
-                <!--Be sure to use Google Maps Javascript API in future iterations of project 
+        <label> Address Two </label>
+        <input
+          type="text"
+          id="addressTwo"
+          name="addressTwo"
+          pattern="[a-zA-Z0-9-]+"
+          maxlength="100"
+        />
+        <div class="divider"></div>
+        <!--Be sure to use Google Maps Javascript API in future iterations of project 
             https://www.quora.com/How-can-I-create-an-input-field-in-HTML-with-all-the-cities-and-states-->
-                <label> City </label>
-                <input
-                    type="text"
-                    id="city"
-                    name="city"
-                    pattern="[a-zA-Z]+"
-                    required
-                    maxlength="100"
-                />
-                <div class="divider"></div>
+        <label> City </label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          pattern="[a-zA-Z]+"
+          required
+          maxlength="100"
+        />
+        <div class="divider"></div>
 
-                <!--Store state names in database and use AJAX to load in future.-->
-                <label> State </label>
-                <select id="state" name="states">
-                    <option value="texas"> TX </option>
-                </select>
-                <div class="divider"></div>
+        <!--Store state names in database and use AJAX to load in future.-->
+        <label> State </label>
+        <select id="state" name="states">
+          <option value="texas"> TX </option>
+        </select>
+        <div class="divider"></div>
 
-                <label> Zip Code </label>
-                <input
-                    type="text"
-                    id="zipCode"
-                    name="zipCode"
-                    pattern="[a-zA-Z0-9-]+"
-                    required
-                    minlength="5"
-                    maxlength="9"
-                />
-                <div class="divider"></div>
+        <label> Zip Code </label>
+        <input
+          type="text"
+          id="zipCode"
+          name="zipCode"
+          pattern="[a-zA-Z0-9-]+"
+          required
+          minlength="5"
+          maxlength="9"
+        />
+        <div class="divider"></div>
 
-                <label> Phone Number </label>
-                <input
-                    title="###-###-####"
-                    type="tel"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    pattern="[0-9-]+"
-                    required
-                    maxlength="12"
-                />
-                <div class="divider"></div>
+        <label> Phone Number </label>
+        <input
+          title="###-###-####"
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          pattern="[0-9-]+"
+          required
+          maxlength="12"
+        />
+        <div class="divider"></div>
 
-                <label> Email </label>
-                <!--Use both regex and the validation method of type to give error messages.-->
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                    required
-                    maxlength="100"
-                />
-                <div class="divider"></div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </body>
+        <label> Email </label>
+        <!--Use both regex and the validation method of type to give error messages.-->
+        <input
+          type="email"
+          id="email"
+          name="email"
+          pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+          required
+          maxlength="100"
+        />
+        <div class="divider"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
 
-    <footer><!--Benjamin Bond--></footer>
+  <footer><!--Benjamin Bond--></footer>
 </html>
