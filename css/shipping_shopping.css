@@ -59,3 +59,16 @@ br {
     width: 50%;
     text-align: right;
 }
+
+ul{
+    list-style-type: none;
+    padding:10px;
+    margin:auto;
+}
+
+li{
+    padding:5px;
+    text-align:center;
+    margin:auto;
+
+}
