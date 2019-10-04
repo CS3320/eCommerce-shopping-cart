@@ -23,7 +23,6 @@ form {
 .background {
   padding: 10px;
   text-align: center;
-  background-color: mintcream;
 }
 
 label {
@@ -55,21 +54,22 @@ div {
 }
 
 br {
-  display: inline-block;
-  float: left;
-  clear: left;
-  width: 50%;
-  text-align: right;
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 50%;
+    text-align: right;
 }
 
-ul {
-  list-style-type: none;
-  padding: 10px;
-  margin: auto;
+ul{
+    list-style-type: none;
+    padding:10px;
+    margin:auto;
 }
 
-li {
-  padding: 5px;
-  text-align: center;
-  margin: auto;
+li{
+    padding:5px;
+    text-align:center;
+    margin:auto;
+
 }
