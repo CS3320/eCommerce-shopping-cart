@@ -3,13 +3,16 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../css/main.css"/>
+    <title> Checkout </title>
 </head>
 
 <body>
 
 <div class="background">
 
-    <h1 id="title"> Order Summary </h1>
+    <h1> Checkout </h1>
+
+    <h2 id="summary"> Order Summary</h2>
 
     <ul>
 
@@ -24,11 +27,8 @@
     <div id="paymentInfo">
 
         <h2>Payment Information</h2>
-        <br/>
-        <br>
-        <form>
             <label for="payment_type"> Payment Type:</label>
-            <select type="selection" name="payment_type" id="payment_type">
+            <select id="payment_type" name="payment_type">
                 <option value="" disabled selected>
                     Select Payment Type
                 </option
@@ -51,16 +51,15 @@
                     name="expiration"
                     id="expiration"
                     required/>
-            <br/><br/>
+            <br/>
 
             <strong> I agree and authorize the amount to be charged to my card</strong>
-            <br/><br/>
+            <br/>
             <label for="agree"> I agree </label>
             <input type="checkbox" name="agree" id="agree" value="agree"><br/><br/>
 
 
             <button type="button">Submit Order</button>
-        </form>
     </div>
 </div>
 
