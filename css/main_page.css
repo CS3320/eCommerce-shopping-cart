@@ -25,12 +25,11 @@ body {
     font-family: "Lato", sans-serif;
 }
 iframe {
-    background: MintCream;
     display: block;
     border: none;
     margin: 0;
     padding: 0;
-    width: 100vw !important;
+    width: 100vw;
     height: 100vh;
 }
 .iframe-container {
@@ -76,11 +75,12 @@ a:focus{
     height: 40px;
 }
 .wrapper {
-    opacity: 0%;
-    background-image: linear-gradient(to top, white 2500%, #595c5f 500%);
-    /*background-image: linear-gradient(white, #595c5f 190% );*/
+    background: MintCream;
 }
 footer {
+    font-weight: 100;
+    opacity: 0.5;
+    text-align: center;
     width: 100w;
     height: 10vh;
 }

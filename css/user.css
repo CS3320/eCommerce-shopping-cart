@@ -19,6 +19,7 @@ label {
     float: left;
     clear: left;
     width: 50%;
+    padding-right: 4px;
     text-align: right;
 }
 input,
@@ -33,6 +34,14 @@ button {
     margin: auto;
     clear: left;
     width: 70px;
+}
+.user-input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px solid black;
+    
+    
+    
 }
 
 h2 {
