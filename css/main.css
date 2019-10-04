@@ -43,11 +43,33 @@ button {
   text-align: center;
   margin: auto;
   clear: left;
-  background-color: white;
-  border: 2px solid #1abc9c;
+  color: white;
+  background-color: #1abc9c;
+  border: 2px solid white;
   font-size: 20px;
   border-radius: 8px;
 }
 div {
   line-height: 200%;
+}
+
+br {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 50%;
+    text-align: right;
+}
+
+ul{
+    list-style-type: none;
+    padding:10px;
+    margin:auto;
+}
+
+li{
+    padding:5px;
+    text-align:center;
+    margin:auto;
+
 }
