@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
+@import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
 .header {
     display: inline-block;
     padding: 20px;
@@ -19,14 +20,8 @@ h1 {
 #description {
     margin: 0;
 }
-/*
-#background-top{
-  background-image: url(../assests/white_stroke.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-*/
 body {
+    padding: 0px;
     font-family: "Lato", sans-serif;
 }
 iframe {
@@ -42,7 +37,15 @@ iframe {
     text-align: center;
 }
 #navBar {
+    background-image: linear-gradient(white 15%, #595c5f 400%);
+    background-size: cover;
+    width: 100vw;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: "Paytone One", sans-serif;
+    text-decoration: none;
     text-align: center;
+    background-color: #fff;
 }
 ul {
     list-style-type: none;
@@ -53,17 +56,31 @@ li {
     display: inline;
 }
 a {
+    color: rgb(102, 153, 153);
     text-decoration: none;
     display: inline-block;
     padding: 8px;
+    transition: background 0.15s ease-in-out;
 }
-ul {
-    background-color: #fff;
+a:hover {
+    transition-delay: .1s;
+    color: #111;
+    background: #1abc9c;
+}
+a:focus{
+    color: white;
+    background: #1abc9c;
 }
 .divider {
     height: 40px;
 }
+.wrapper {
+    background: MintCream;
+}
 footer {
+    font-weight: 100;
+    opacity: 0.5;
+    text-align: center;
     width: 100w;
     height: 10vh;
 }
