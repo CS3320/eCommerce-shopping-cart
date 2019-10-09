@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
+.header {
+    text-shadow: 3px 33px 5px #aaa;
+}
 body {
   font-family: "Lato", sans-serif;
+  
 }
 
 h2 {
@@ -39,6 +43,13 @@ select {
   padding: 2px;
   margin: 10px;
   float: left;
+}
+input {
+    border-top: 0px;
+    border-left: 0px;
+}
+select {
+    border: none;
 }
 
 button {
