@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-.header {
-    text-shadow: 3px 33px 5px #aaa;
-}
 body {
   font-family: "Lato", sans-serif;
   
@@ -11,11 +8,13 @@ body {
 h2 {
   padding: 2px;
   margin: 2px;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
   display: block;
   float: left;
   width: 100%;
   height: 100%;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+  letter-spacing: .05em;
 }
 
 form {
