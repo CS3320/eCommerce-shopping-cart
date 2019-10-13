@@ -3,14 +3,15 @@
   <head>
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/shopping_cart.js" defer></script>
   </head>
   <body>
     <div class="background">
       <h2>Shopping Cart</h2>
-      <form action="/pick-price-and-amount">
+      <form method="get" id="cartform">
         <label> Select a Product: </label>
-        <!--use AJAX to load databse in the future-->
-        <select>
+        <!--use AJAX to load database in the future-->
+        <select id="product">
           <option value="product1">Product 1 ($1/unit)</option>
           <option value="product2">Product 2 ($1/unit)</option>
           <option value="product3">Product 3 ($1/unit)</option>
@@ -38,21 +39,13 @@
           placeholder="$999"
           readonly
         />
-
         <div class="divider"></div>
-
-        <label> Total Price: </label>
-        <!--Use Javascript to calculate and populate this field in the future-->
-        <input
-          type="text"
-          id="total"
-          name="total"
-          placeholder="$999"
-          readonly
-        />
-
+        <button type="button" id="addToCart">Add to Cart</button>
         <div class="divider"></div>
-        <button type="submit">Add to Cart</button>
+        <br />
+        <span id="checkoutSpan">
+          <label> Total Price: $</label><label id="total">0</label>
+        </span>
       </form>
       <button type="button">Checkout</button>
     </div>
