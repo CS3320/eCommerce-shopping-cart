@@ -30,22 +30,12 @@
         />
         <div class="divider"></div>
 
-        <label> Unit Price: </label>
-        <!--This is auto-populated in the future-->
-        <input
-          type="text"
-          id="price"
-          name="price"
-          placeholder="$999"
-          readonly
-        />
+        <label> Unit Price: $<span id="unitPrice"></span></label>
         <div class="divider"></div>
         <button type="button" id="addToCart">Add to Cart</button>
         <div class="divider"></div>
         <br />
-        <span id="checkoutSpan">
-          <label> Total Price: $</label><label id="total">0</label>
-        </span>
+        <div class="divider">Total Price: $<span id="total">0</span></div>
       </form>
       <button type="button">Checkout</button>
     </div>
