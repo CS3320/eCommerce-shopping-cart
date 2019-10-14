@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-
+/* Reminder to devs: can use Ctrl + e to open built in color selector in brackets*/
 body {
   font-family: "Lato", sans-serif;
   
@@ -19,7 +19,7 @@ h2 {
 
 form {
   width: 80vw;
-  height: 80vh;
+  height: 45vh;
   margin: auto;
 }
 
@@ -41,14 +41,15 @@ input,
 select {
   padding: 2px;
   margin: 10px;
+  max-width: 13em;
+  border-color: #cecece;
+  border: 1px outset;
+  border-top: none;
+  border-left: none;
   float: left;
 }
-input {
-    border-top: 0px;
-    border-left: 0px;
-}
 select {
-    border: none;
+    
 }
 
 button {
