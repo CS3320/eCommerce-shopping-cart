@@ -3,18 +3,19 @@
   <head>
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/shopping_cart.js" defer></script>
   </head>
   <body>
     <div class="background">
       <h2>Shopping Cart</h2>
-      <form action="/pick-price-and-amount">
+      <form method="get" id="cartform">
         <label> Select a Product: </label>
-        <!--use AJAX to load databse in the future-->
-        <select>
-          <option value="product1">Product 1</option>
-          <option value="product2">Product 2</option>
-          <option value="product3">Product 3</option>
-          <option value="product4">Product 4</option>
+        <!--use AJAX to load database in the future-->
+        <select id="product">
+          <option value="product1">Product 1 ($1/unit)</option>
+          <option value="product2">Product 2 ($1/unit)</option>
+          <option value="product3">Product 3 ($1/unit)</option>
+          <option value="product4">Product 4 ($1/unit)</option>
         </select>
         <div class="divider"></div>
 
@@ -29,31 +30,14 @@
         />
         <div class="divider"></div>
 
-        <label> Unit Price: </label>
-        <!--This is auto-populated in the future-->
-        <input
-          type="text"
-          id="price"
-          name="price"
-          placeholder="$999"
-          readonly
-        />
-
+        <label> Unit Price: $<span id="unitPrice"></span></label>
         <div class="divider"></div>
-
-        <label> Total Price: </label>
-        <!--Use Javascript to calculate and populate this field in the future-->
-        <input
-          type="text"
-          id="total"
-          name="total"
-          placeholder="$999"
-          readonly
-        />
-
+        <button type="button" id="addToCart">Add to Cart</button>
         <div class="divider"></div>
-        <button type="submit">Checkout</button>
+        <br />
+        <div class="divider">Total Price: $<span id="total">0</span></div>
       </form>
+      <button type="button">Checkout</button>
     </div>
   </body>
 

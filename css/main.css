@@ -2,7 +2,6 @@
 /* Reminder to devs: can use Ctrl + e to open built in color selector in brackets*/
 body {
   font-family: "Lato", sans-serif;
-  
 }
 
 h2 {
@@ -13,8 +12,8 @@ h2 {
   float: left;
   width: 100%;
   height: 100%;
-  text-shadow: 1px 1px 2px rgba(0,0,0,.3);
-  letter-spacing: .05em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.05em;
 }
 
 form {
@@ -28,7 +27,7 @@ form {
   text-align: center;
 }
 #title {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 label {
@@ -48,8 +47,9 @@ select {
   border-left: none;
   float: left;
 }
+
 select {
-    
+
 }
 
 button {
@@ -73,24 +73,23 @@ div {
 }
 
 br {
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 50%;
-    text-align: right;
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 50%;
+  text-align: right;
 }
 
-ul{
-    list-style-type: none;
-    padding:10px;
-    margin:auto;
+ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: auto;
 }
 li.checkout-list {
-    padding:0px;
+  padding: 0px;
 }
-li{
-    padding:5px;
-    text-align:center;
-    margin:auto;
-
+li {
+  padding: 5px;
+  text-align: center;
+  margin: auto;
 }
