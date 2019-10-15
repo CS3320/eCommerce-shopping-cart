@@ -2,43 +2,47 @@
 
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="checkout.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <title> Checkout </title>
 </head>
 
 <body>
 
 <div class="background">
 
-    <h1 id="title"> Order Summary </h1>
+    <h1> Checkout </h1>
 
-    <br> Items:</br>
-    <br> Shipping & Handling:</br>
-    <br> Total before tax:</br>
-    <br> Estimated tax:</br>
-    <br> ORDER TOTAL:</br><br/>
+    <h2 id="summary"> Order Summary</h2>
+
+    <ul>
+
+        <li class="checkout-list"> Items:</li>
+        <li class="checkout-list"> Shipping & Handling:</li>
+        <li class="checkout-list"> Total before tax:</li>
+        <li class="checkout-list"> Estimated tax:</li>
+        <li class="checkout-list"> ORDER TOTAL:</li>
+
+    </ul>
 
     <div id="paymentInfo">
-
-        <h2>Payment Information</h2>
-        <br/>
-        <br>
-        <form>
+        <form action="confirmation_page.html">
+            <h2>Payment Information</h2>
             <label for="payment_type"> Payment Type:</label>
-            <select type="selection" name="payment_type" id="payment_type">
+            <select id="payment_type" name="payment_type">
                 <option value="" disabled selected>
                     Select Payment Type
-                </option
-                >
+                </option>
                 <option value="visa"> Visa</option>
                 <option value="mastercard"> MasterCard</option>
                 <option value="american express"> American Express</option>
-                required </select>
+            </select>
             <label for="cardnumber">Card Number:</label>
             <input
                     type="text"
                     name="cardnumber"
                     id="cardnumber"
                     placeholder="Card Number"
+                    pattern="[0-9]{13,16}"
                     required/>
 
             <label for="expiration"> Expiration Date:</label>
@@ -47,15 +51,15 @@
                     name="expiration"
                     id="expiration"
                     required/>
-            <br/><br/>
+            <br/>
 
-            <strong> I agree and authorize the amount to be charged to my card</strong>
-            <br/><br/>
+            <strong class="agree-and-authorize"> I agree and authorize the amount to be charged to my card</strong>
+
+            <br/>
             <label for="agree"> I agree </label>
-            <input type="checkbox" name="agree" id="agree" value="agree"><br/><br/>
+            <input type="checkbox" name="agree" id="agree" value="agree" required><br/><br/>
 
-
-            <button type="button">Submit Order</button>
+            <button type="submit">Submit Order</button>
         </form>
     </div>
 </div>
