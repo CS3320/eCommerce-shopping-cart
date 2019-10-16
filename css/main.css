@@ -18,7 +18,7 @@ h2 {
 
 form {
   width: 80vw;
-  height: 45vh;
+  height: 80vh;
   margin: auto;
 }
 
@@ -85,9 +85,7 @@ ul {
   padding: 10px;
   margin: auto;
 }
-li.checkout-list {
-  padding: 0px;
-}
+
 li {
   padding: 5px;
   text-align: center;
