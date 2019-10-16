@@ -17,8 +17,8 @@ h2 {
 }
 
 form {
-  width: 80vw;
-  height: 80vh;
+  /*width: 80vw;
+  height: 80vh;*/
   margin: auto;
 }
 
@@ -46,10 +46,6 @@ select {
   border-top: none;
   border-left: none;
   float: left;
-}
-
-select {
-
 }
 
 button {
