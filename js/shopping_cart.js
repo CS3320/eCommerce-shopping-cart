@@ -34,7 +34,18 @@ function calculateTotal() {
   document.getElementById("total").innerHTML = currentTotal;
 }
 
-function addToTable() {}
+function addToTable() {
+  var theForm = document.forms["cartform"];
+  var selectedItem = theForm.elements["product"];
+  var text = selectedItem.options[selectedItem.selectedIndex].text;
+  var quantity = theForm.elements["units"].value;
+  var table = document.getElementById("cart");
+  var row = table.insertRow(-1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = text;
+  cell2.innerHTML = quantity;
+}
 
 if (document.getElementById("addToCart")) {
   document
