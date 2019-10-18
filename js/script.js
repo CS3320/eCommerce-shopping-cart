@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var dropdown = $("#states");
+    let dropdown = $("#states");
 
     dropdown.empty();
 
@@ -20,4 +20,18 @@ $(document).ready(function() {
             );
         });
     });
+    
+    
+    
+    if (document.getElementById("")) {
+        document.getElementById("units").addEventListener("change", setUnitPrice);
+    }
+    //checkout section begin
+    
+    function getCheckoutPrice() {
+        return localStorage.getItem('totalPrice');
+    }
+    //check
 });
+
+
