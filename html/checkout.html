@@ -47,15 +47,20 @@
                     id="cardnumber"
                     placeholder="Card Number"
                     pattern="[0-9]{13,16}"
+                    title="Please Enter a Valid Card Number "
                     required/>
 
-            <label for="expiration"> Expiration Date:</label>
+            <label for="month"> Expiration Date:</label>
             <input
-                    type="date"
-                    name="expiration"
-                    id="expiration"
+                    type="text"
+                    pattern="(0[1-9]|10|11|12)/[0-9]{2}"
+                    title="Please Enter the Expiration Date in MM/YY Format"
+                    placeholder="MM/YY"
+                    name="month"
+                    id="month"
                     required/>
             <br/>
+
 
             <strong class="agree-and-authorize"> I agree and authorize the amount to be charged to my card</strong>
 
