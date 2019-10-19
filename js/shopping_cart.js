@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+
 
     //set prices for each item
     var item_prices = new Array();
@@ -7,10 +7,19 @@ jQuery(document).ready(function() {
     item_prices["product3"] = 1;
     item_prices["product4"] = 1;
 
-    localStorage.setItem('totalPrice', 0);
+    //localStorage.setItem('totalPrice', 0);
     var currentTotal = 
     parseInt(document.getElementById("total").innerHTML);
+    var currentItemCount= 0;
     var table = document.createElement("table");
+
+    window.onload = getLocalStorage();
+
+    function getLocalStorage() {
+        document.getElementById("total").innerHTML = localStorage.getItem("totalPrice");
+        document.forms["cartform"].elements["units"].value = localStorage.getItem("units");
+            
+    }
 
     function getItemPrice() {
       var itemPrice = 0;
@@ -23,6 +32,7 @@ jQuery(document).ready(function() {
     function getQuantity() {
       var theForm = document.forms["cartform"];
       var quantity = theForm.elements["units"];
+      localStorage.setItem('units', quantity.value);
       return quantity.value;
     }
 
@@ -30,23 +40,41 @@ jQuery(document).ready(function() {
       document.getElementById("unitPrice").innerHTML = parseInt(
         getItemPrice() * getQuantity()
       );
+      localStorage.setItem('unitPrice', JSON.stringify(getItemPrice()+getQuantity()));
     }
 
     function calculateTotal() {
       var totalPrice = parseInt(getItemPrice() * getQuantity());
       currentTotal += totalPrice;
-      localStorage.setItem('totalPrice', totalPrice);
       document.getElementById("total").innerHTML = currentTotal;
+        
+      currentItemCount= currentItemCount + parseInt(localStorage.getItem('units'));
+      localStorage.setItem('itemCount', currentItemCount);
+      localStorage.setItem('totalPrice', JSON.stringify(currentTotal));
     }
 
-    function addToTable() {}
+    function addToTable() {
+        if(document.forms["cartform"].elements["units"].value >= 0){
+            var theForm = document.forms["cartform"];
+            var selectedItem = theForm.elements["product"];
+            var text = selectedItem.options[selectedItem.selectedIndex].text;
+            var quantity = theForm.elements["units"].value;
+            var table = document.getElementById("cart");
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = text;
+            cell2.innerHTML = quantity;
+        }
+    }
 
     function checkout(){
         console.log("kind of working");
         const host = location.hostname;
         const port = location.port;
         const url = "http://" + host + ":" + port + "/html/checkout.html";
-        document.getElementById("iframe_a").src = url;
+       
+        window.parent.document.getElementById("iframe_a").src = url;
     }
 
     if (document.getElementById("addToCart")) {
@@ -60,9 +88,7 @@ jQuery(document).ready(function() {
       document.getElementById("units").addEventListener("change", setUnitPrice);
     }
 
-    if (document.getElementById("checkoutButton")) {
+    if (document.getElementById("checkoutButton") ) {
         document.getElementById("checkoutButton").addEventListener("click", checkout);
     }
-    //temp
 
-});

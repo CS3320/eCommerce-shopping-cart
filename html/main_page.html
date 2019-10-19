@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="../css/main_page.css" />
-  <script type="text/javascript" language="javascript" src="../js/states.json"></script>
+  <script type="text/javascript" language="javascript" src="../js/states.json" defer></script>
 </head>
 <body>
   <header>
@@ -16,25 +16,27 @@
     <nav id="navBar">
       <ul>
         <li>
-          <a href="checkout.html" target="iframe_a"> CHECKOUT</a>
+          <li><a id="user_nav"href="user.html" target="iframe_a"> USER </a></li>
         </li>
         <li>
-          <a href="shipping_information.html" target="iframe_a">
+          <a id="shipping_info_nav"href="shipping_information.html" target="iframe_a">
             SHIPPING INFORMATION
           </a>
         </li>
         <li>
-          <a href="shopping_cart.html" target="iframe_a">
+          <a id="shopping_cart_nav"href="shopping_cart.html" target="iframe_a">
             SHOPPING CART
           </a>
         </li>
-        <li><a href="user.html" target="iframe_a"> USER </a></li>
+          <li>
+          <a id="checkout_nav" href="checkout.html" target="iframe_a"> CHECKOUT</a>
+        </li>
       </ul>
     </nav>
 
     <div class="wrapper">
       <div class="iframe-container">
-        <iframe name="iframe_a"></iframe>
+        <iframe name="iframe_a" id="iframe_a"></iframe>
       </div>
       <footer>Created by Siri Sjoboen, Benjamin Bond, and Evan Estrada</footer>
     </div>
