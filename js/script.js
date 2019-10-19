@@ -5,7 +5,7 @@ $(document).ready(function() {
     
     
     
-    if(window.location !== window.parent.location ){
+    
         let dropdown = $("#states");
 
         dropdown.empty();
@@ -24,13 +24,13 @@ $(document).ready(function() {
                 );
             });
         });
-    }
+    
     
     
         
         localStorage.setItem('shippingCost', '3');
         //checkout section begin
-
+        
 
         window.onload = loadCurrentValues();
 
