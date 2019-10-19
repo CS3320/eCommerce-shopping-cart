@@ -87,3 +87,45 @@ li {
   text-align: center;
   margin: auto;
 }
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  border-spacing: 5px;
+  float: right;
+  padding: 15px;
+  margin-right: 50px;
+}
+th,
+td {
+  padding: 15px;
+  font-size: 15px;
+}
+th {
+  text-align: left;
+}
+
+li.checkout-list {
+  padding: 0px;
+}
+#cartform {
+  float: left;
+  width: 350px;
+  height: 100px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 30px;
+  justify-items: center;
+}
+.grid-item {
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+}
