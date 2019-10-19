@@ -13,7 +13,6 @@ $(document).ready(function() {
         dropdown.append('<option selected="true" disabled> Choose State </option>');
         dropdown.prop("selectedIndex", 0);
         
-        console.log("working");
         let urlCurrent = "http://" + host + ":" + port + "/js/states.json";
         //populate dropdown with list of states
         $.getJSON(urlCurrent, function(data) {
@@ -30,9 +29,6 @@ $(document).ready(function() {
     
         
         localStorage.setItem('shippingCost', '3');
-        if (document.getElementById("")) {
-            document.getElementById("units").addEventListener("change", setUnitPrice);
-        }
         //checkout section begin
 
 
