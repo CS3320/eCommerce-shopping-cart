@@ -28,7 +28,6 @@ $(document).ready(function() {
     
     
         
-        localStorage.setItem('shippingCost', '3');
         //checkout section begin
         
 
@@ -54,7 +53,7 @@ $(document).ready(function() {
         function setShippingHandling(){
             //default value currently
             if(document.getElementById("shippingAndHandling")){
-                document.getElementById("shippingAndHandling").innerHTML = "Shipping & Handling: $" + parseFloat(localStorage.getItem("shippingCost"));
+                document.getElementById("shippingAndHandling").innerHTML = "Shipping & Handling: $" + parseFloat(localStorage.getItem("totalPrice")*0.03);
             }else{
                document.getElementById("shippingAndHandling").innerHTML = "Shipping & Handling: $0"; 
             }
@@ -71,14 +70,17 @@ $(document).ready(function() {
 
             if(!(localStorage.getItem("totalPrice") === null)){
                 let tax = parseFloat(localStorage.getItem("totalPrice")) * 0.08;
-                document.getElementById("estimatedTax").innerHTML = "Estimated Tax: $" + tax.toFixed(2);
+                document.getElementById("estimatedTax").innerHTML = "Estimated Tax: $" + tax.toFixed(2)
             }else{
                document.getElementById("estimatedTax").innerHTML = "Estimated Tax: $0"; 
             }
         }
         function setOrderTotal(){
-            let totalWithTaxAndShipping = (parseFloat(localStorage.getItem("shippingCost"))+ parseFloat(localStorage.getItem("totalPrice")) + 0.08*parseFloat(localStorage.getItem("totalPrice"))).toFixed(2);
+            let totalWithTaxAndShipping = parseFloat(localStorage.getItem("totalPrice"))*0.03 +    parseFloat(localStorage.getItem("totalPrice")) + 0.08*parseFloat(localStorage.getItem("totalPrice")).toFixed(2);
+            
             document.getElementById("orderTotal").innerHTML = "Order Total: $" + totalWithTaxAndShipping;
+            let withShipping = totalWithTaxAndShipping*.03;
+            localStorage.setItem('shippingAndHandling', withShipping);
         }
 
     //check
