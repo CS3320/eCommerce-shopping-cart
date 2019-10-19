@@ -18,8 +18,7 @@
 
     function getLocalStorage() {
         document.getElementById("total").innerHTML = localStorage.getItem("totalPrice");
-        document.forms["cartform"].elements["units"].value = localStorage.getItem("units");
-            
+        document.forms["cartform"].elements["units"].value = localStorage.getItem("units");      
     }
 
     function getItemPrice() {
@@ -70,7 +69,6 @@
     }
 
     function checkout(){
-        console.log("kind of working");
         const host = location.hostname;
         const port = location.port;
         const url = "http://" + host + ":" + port + "/html/checkout.html";
@@ -93,7 +91,6 @@
         document.getElementById("checkoutButton").addEventListener("click", checkout);
     }
 
-=======
 //set prices for each item
 var item_prices = new Array();
 item_prices["product1"] = 1;
