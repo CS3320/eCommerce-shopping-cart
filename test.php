@@ -15,6 +15,7 @@ $database = "CREATE SCHEMA IF NOT EXISTS cs3320";
 
 if ($conn->query($database) === TRUE) {
     echo "Database cs3320 created successfully";
+    echo "<br/>";
 } else {
     echo "Error creating database: " . $conn->error;
 }
@@ -26,33 +27,24 @@ if ($conn2->connect_error) {
     die("Connection failed: " . $conn2->connect_error);
 }
 
-$tables = "CREATE TABLE IF NOT EXISTS cs3320.Orders (
-  userID INT(10) UNSIGNED NOT NULL,
-  orderNumber INT(10) UNSIGNED NOT NULL,
-  productID INT(10) UNSIGNED NOT NULL,
-  quantity VARCHAR(45) NOT NULL,
-  totalPrice DOUBLE NOT NULL,
-  PRIMARY KEY (userID)
-  );
-  
-  CREATE TABLE IF NOT EXISTS cs3320.PaymentInformation (
-  userID INT(10) UNSIGNED NOT NULL,
-  cardType VARCHAR(45) NOT NULL,
-  cardNumber INT(10) UNSIGNED NOT NULL,
-  expDate INT(11) NOT NULL,
-  PRIMARY KEY (userID)
-  );";
-
+$init = file_get_contents("sql\cs3320.sql");
 
 //$sql = file_get_contents('sql/cs3320.sql');
 
-if ($conn2->query($tables) === TRUE) {
-    echo "Table cs3320 created successfully";
+if ($conn2->multi_query($init) === TRUE) {
+    echo "Data tables for cs3320 created successfully";
+    echo "<br/>";
 } else {
-    echo "Error creating table: " . $conn2->error;
+    echo "Error creating tables: " . $conn2->error;
 }
+// this code is in case more queries want to be run after this one. 
+// You need to clear results of queries in order to run more.
+// do {
+//     if ($res = $conn2->store_result()) {
+//       $res->free();
+//     }
+//    } while ($conn2->more_results() && $conn2->next_result());
 
-echo"Great work!!!";
 
-
+$conn2->close();
 ?>
