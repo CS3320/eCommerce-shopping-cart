@@ -10,7 +10,7 @@
   <body onload="showStates()">
     <div class="background">
       <h2>Shipping Information</h2>
-      <form action="/shippingInfo">
+      <form action="shipping.php" method="post">
         <label> Use Physical Address? </label>
         <!--use this checkbox to prepoulate data (if checked) in the future-->
         <input type="checkbox" id="yes" name="yes" />
@@ -22,30 +22,16 @@
           id="addressOne"
           name="addressOne"
           required
-          pattern="[a-zA-Z0-9-]+"
           maxlength="100"
         />
 
         <div class="divider"></div>
         <label> Address Two: </label>
-        <input
-          type="text"
-          id="addressOne"
-          name="addressOne"
-          pattern="[a-zA-Z0-9-]+"
-          maxlength="100"
-        />
+        <input type="text" id="addressTwo" name="addressTwo" maxlength="100" />
 
         <div class="divider"></div>
         <label> City: </label>
-        <input
-          type="text"
-          id="city"
-          name="city"
-          pattern="[a-zA-Z]+"
-          required
-          maxlength="100"
-        />
+        <input type="text" id="city" name="city" required maxlength="100" />
 
         <div class="divider"></div>
         <label> State: </label>
@@ -57,7 +43,6 @@
           type="text"
           id="zipCode"
           name="zipCode"
-          pattern="[a-zA-Z0-9-]+"
           required
           minlength="5"
           maxlength="9"
