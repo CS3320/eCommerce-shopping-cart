@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS cs3320.Products (
   productID INT(10) UNSIGNED NOT NULL,
   description VARCHAR(500) NOT NULL,
   unitPrice DOUBLE NOT NULL,
-  PRIMARY KEY (productID, description, unitPrice));
+  PRIMARY KEY (productID);
 
 
 
@@ -44,12 +44,12 @@ CREATE TABLE IF NOT EXISTS cs3320.UserCredentials (
 
 CREATE TABLE IF NOT EXISTS cs3320.UserInformation (
   userID INT(10) UNSIGNED NOT NULL,
-  fullName VARCHAR(50) NOT NULL,
+  fullName VARCHAR(100) NOT NULL,
   address1 VARCHAR(100) NOT NULL,
-  address2 VARCHAR(45) NOT NULL,
-  city VARCHAR(45) NOT NULL,
+  address2 VARCHAR(100) NOT NULL,
+  city VARCHAR(100) NOT NULL,
   state VARCHAR(45) NOT NULL,
-  zip INT(11) NOT NULL,
+  zip INT(9) NOT NULL,
   PRIMARY KEY (userID, fullName, address1, address2, city, state, zip));
 
 
