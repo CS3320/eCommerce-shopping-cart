@@ -19,7 +19,7 @@
           id="fullName"
           name="fullName"
           required
-          pattern="[A-Za-z]+"
+          pattern="/^[a-zA-Z .'-]+$/i"
           maxlength="100"
         />
         <div class="divider"></div>
@@ -46,8 +46,7 @@
           maxlength="100"
         />
         <div class="divider"></div>
-        <!--Be sure to use Google Maps Javascript API in future iterations of project 
-            https://www.quora.com/How-can-I-create-an-input-field-in-HTML-with-all-the-cities-and-states-->
+        
         <label> City </label>
         <input
           class="user-input"

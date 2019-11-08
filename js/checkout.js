@@ -1,7 +1,11 @@
 $(document).ready(function() {
-    $("submitPayment").submit(function(event) {
+
+    
+    var request;
+    $("#submitPayment").submit(function(event) {
         var ajaxRequest;
 
+        
         /* Stop form from submitting normally */
         event.preventDefault();
 
@@ -20,7 +24,7 @@ $(document).ready(function() {
 
         // Serialize the data in the form
         var serializedData = $form.serialize();
-
+        console.log(serializedData);
         // Let's disable the inputs for the duration of the Ajax request.
         // Note: we disable elements AFTER the form data has been serialized.
         // Disabled form elements will not be serialized.
@@ -33,24 +37,23 @@ $(document).ready(function() {
         by abort(). jQuery Ajax methods return an XMLHttpRequest
         object, so you can just use abort(). */
         ajaxRequest= $.ajax({
-                url: "checkout.php",
+                url: "http://localhost/eCommerce-shopping-cart/html/checkout.php",
                 type: "post",
                 data: serializedData
             });
-
         /*  Request can be aborted by ajaxRequest.abort() */
 
         ajaxRequest.done(function (response, textStatus, jqXHR){
 
             // Show successfully for submit message
-            $("#result").html('Submitted successfully');
+            console.log("sucess");
         });
 
         /* On failure of request this function will be called  */
         ajaxRequest.fail(function (){
 
             // Show error
-            $("#result").html('There is error while submit');
+            console.log("fail");
         });
     });
 });

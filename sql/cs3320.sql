@@ -10,10 +10,10 @@ CREATE TABLE IF NOT EXISTS cs3320.Orders (
   PRIMARY KEY (userID, orderNumber, productID, quantity, totalPrice));
 
 CREATE TABLE IF NOT EXISTS cs3320.PaymentInformation (
-  userID INT(10) UNSIGNED NOT NULL,
+  userID INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   cardType VARCHAR(45) NOT NULL,
-  cardNumber INT(10) UNSIGNED NOT NULL,
-  expDate INT(11) NOT NULL,
+  cardNumber BIGINT(16) NOT NULL,
+  expDate INT(16) NOT NULL,
   PRIMARY KEY (userID, cardType, cardNumber, expDate));
 
 
@@ -21,8 +21,7 @@ CREATE TABLE IF NOT EXISTS cs3320.Products (
   productID INT(10) UNSIGNED NOT NULL,
   description VARCHAR(500) NOT NULL,
   unitPrice DOUBLE NOT NULL,
-  PRIMARY KEY (productID);
-
+  PRIMARY KEY (productID));
 
 
 CREATE TABLE IF NOT EXISTS cs3320.ShippingInformation (
@@ -112,4 +111,5 @@ INSERT into states (state_abbr, state_name) values ('AL', 'Alabama'),
 ('WV', 'West Virginia'),
 ('WI', 'Wisconsin'),
 ('WY', 'Wyoming');
+
 
