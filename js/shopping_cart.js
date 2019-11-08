@@ -1,6 +1,5 @@
 
 
-
     //set prices for each item
     var item_prices = new Array();
     item_prices["product1"] = 1;
@@ -91,3 +90,4 @@
     if (document.getElementById("checkoutButton") ) {
         document.getElementById("checkoutButton").addEventListener("click", checkout);
     }
+  

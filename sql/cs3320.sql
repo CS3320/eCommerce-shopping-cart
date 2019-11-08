@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS cs3320.Orders (
   PRIMARY KEY (userID, orderNumber, productID, quantity, totalPrice));
 
 CREATE TABLE IF NOT EXISTS cs3320.PaymentInformation (
-  userID INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  userID INT(10) UNSIGNED NOT NULL,
   cardType VARCHAR(45) NOT NULL,
   cardNumber BIGINT(16) NOT NULL,
   expDate INT(16) NOT NULL,
@@ -33,24 +33,24 @@ CREATE TABLE IF NOT EXISTS cs3320.ShippingInformation (
   zip INT(11) NOT NULL,
   PRIMARY KEY (userID, address1, address2, city, state, zip));
 
+CREATE TABLE IF NOT EXISTS cs3320.UserInformation(
+    userID INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+    fullName VARCHAR(100) NOT NULL,
+    address1 VARCHAR(100) NOT NULL,
+    address2 VARCHAR(100) NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    state VARCHAR(45) NOT NULL,
+    zip INT(9) NOT NULL,
+    phone VARCHAR(12) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    PRIMARY KEY(userID, email),
+    UNIQUE KEY(fullName, address1, address2, city, state, zip));
 
 CREATE TABLE IF NOT EXISTS cs3320.UserCredentials (
   userID INT(10) UNSIGNED NOT NULL,
-  username VARCHAR(50) NOT NULL,
+  username VARCHAR(100) NOT NULL,
   password VARCHAR(50) NOT NULL,
   PRIMARY KEY (userID, username, password));
-
-
-CREATE TABLE IF NOT EXISTS cs3320.UserInformation (
-  userID INT(10) UNSIGNED NOT NULL,
-  fullName VARCHAR(100) NOT NULL,
-  address1 VARCHAR(100) NOT NULL,
-  address2 VARCHAR(100) NOT NULL,
-  city VARCHAR(100) NOT NULL,
-  state VARCHAR(45) NOT NULL,
-  zip INT(9) NOT NULL,
-  PRIMARY KEY (userID, fullName, address1, address2, city, state, zip));
-
 
 CREATE TABLE IF NOT EXISTS cs3320.states (
   state_id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'PK: State ID',

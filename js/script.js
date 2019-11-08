@@ -1,26 +1,9 @@
 $(document).ready(function() {
+
+  if ((window.location.href.indexOf('checkout.html') > -1) || window.location.href.indexOf('shopping_cart.html') > -1) {
   const host = location.hostname;
   const port = location.port;
   let url = "http://" + host + ":" + port;
-
-  // let dropdown = $("#states");
-
-  // dropdown.empty();
-
-  // dropdown.append('<option selected="true" disabled> Choose State </option>');
-  // dropdown.prop("selectedIndex", 0);
-
-  // let urlCurrent = "http://" + host + ":" + port + "/js/states.json";
-  // //populate dropdown with list of states
-  // $.getJSON(urlCurrent, function(data) {
-  //     $.each(data, function(key, entry) {
-  //         dropdown.append(
-  //             $("<option></option>")
-  //                 .attr("value", entry.abbreviation)
-  //                 .text(entry.name)
-  //         );
-  //     });
-  // });
 
   //checkout section begin
 
@@ -83,6 +66,6 @@ $(document).ready(function() {
     let withShipping = totalWithTaxAndShipping * 0.03;
     localStorage.setItem("shippingAndHandling", withShipping);
   }
-
+  }
   //check
 });

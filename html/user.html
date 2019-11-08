@@ -10,7 +10,7 @@
   <body onload="showStates()">
     <div class="background">
       <h2>User Information</h2>
-      <form action="/submit-user-info">
+      <form action="../php/postUserInfo.php" method="post">
         <label> Full Name (100 characters) </label>
 
         <input
@@ -19,7 +19,7 @@
           id="fullName"
           name="fullName"
           required
-          pattern="/^[a-zA-Z .'-]+$/i"
+          pattern="[a-zA-Z\s]+"
           maxlength="100"
         />
         <div class="divider"></div>
@@ -31,7 +31,7 @@
           id="addressOne"
           name="addressOne"
           required
-          pattern="[a-zA-Z0-9-]+"
+          pattern="[a-zA-Z0-9-\s]+"
           maxlength="100"
         />
         <div class="divider"></div>
@@ -42,7 +42,7 @@
           type="text"
           id="addressTwo"
           name="addressTwo"
-          pattern="[a-zA-Z0-9-]+"
+          pattern="[a-zA-Z0-9-.\s]+"
           maxlength="100"
         />
         <div class="divider"></div>
@@ -53,7 +53,7 @@
           type="text"
           id="city"
           name="city"
-          pattern="[a-zA-Z]+"
+          pattern="[a-zA-Z\s]+"
           required
           maxlength="100"
         />
@@ -97,7 +97,6 @@
           type="email"
           id="email"
           name="email"
-          pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
           required
           maxlength="100"
         />
