@@ -16,15 +16,29 @@ VALUES ('$_POST[fullName]','$_POST[addressOne]','$_POST[addressTwo]',
 '$_POST[city]', '$_POST[state]', '$_POST[zipCode]', '$_POST[phoneNumber]', '$_POST[email]')";
 
 
+
+
+$sql2="SELECT userID FROM userinformation WHERE email = '$_POST[email]' ";
+
 if (!mysqli_query($conn,$sql))
   {
       die('Error: ' . mysqli_error($conn));
-      print_r($_POST);
+      //print_r($_POST);
   }
   else {
-    print_r($_POST);
-    echo "<br Successfully input your information />";
+    //print_r($_POST);
+    //echo "<br Successfully input your information />";
   }
+
+//   $result = mysqli_query($conn,$sql2);
+//   while($row = mysqli_fetch_array($result)) {
+//     echo $row['userID']; // Print a single column data
+//     echo print_r($row);       // Print the entire row data
+//   }
+  
+  
+  
+ 
  
 mysqli_close($conn);
 

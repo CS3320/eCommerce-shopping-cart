@@ -64,7 +64,6 @@
             var cell2 = row.insertCell(1);
             cell1.innerHTML = text;
             cell2.innerHTML = quantity;
-            localStorage.setItem()
         }
     }
 

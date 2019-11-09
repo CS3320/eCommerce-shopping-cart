@@ -1,6 +1,16 @@
 CREATE SCHEMA IF NOT EXISTS cs3320;
 USE cs3320;
 
+CREATE TABLE IF NOT EXISTS products (
+  product_id int(11) NOT NULL,
+  name varchar(100) NOT NULL,
+  sku varchar(14) NOT NULL,
+  price decimal(15,2) NOT NULL,
+  image varchar(50) NOT NULL,
+  PRIMARY KEY (product_id),
+  UNIQUE KEY sku (sku)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
 CREATE TABLE IF NOT EXISTS cs3320.Orders (
   userID INT(10) UNSIGNED NOT NULL,
   orderNumber INT(10) UNSIGNED NOT NULL,
@@ -15,14 +25,6 @@ CREATE TABLE IF NOT EXISTS cs3320.PaymentInformation (
   cardNumber BIGINT(16) NOT NULL,
   expDate INT(16) NOT NULL,
   PRIMARY KEY (userID, cardType, cardNumber, expDate));
-
-
-CREATE TABLE IF NOT EXISTS cs3320.Products (
-  productID INT(10) UNSIGNED NOT NULL,
-  description VARCHAR(500) NOT NULL,
-  unitPrice DOUBLE NOT NULL,
-  PRIMARY KEY (productID));
-
 
 CREATE TABLE IF NOT EXISTS cs3320.ShippingInformation (
   userID INT(10) UNSIGNED NOT NULL,
@@ -44,7 +46,7 @@ CREATE TABLE IF NOT EXISTS cs3320.UserInformation(
     phone VARCHAR(12) NOT NULL,
     email VARCHAR(100) NOT NULL,
     PRIMARY KEY(userID, email),
-    UNIQUE KEY(fullName, address1, address2, city, state, zip));
+    UNIQUE KEY(email));
 
 CREATE TABLE IF NOT EXISTS cs3320.UserCredentials (
   userID INT(10) UNSIGNED NOT NULL,
@@ -111,5 +113,10 @@ INSERT into states (state_abbr, state_name) values ('AL', 'Alabama'),
 ('WV', 'West Virginia'),
 ('WI', 'Wisconsin'),
 ('WY', 'Wyoming');
+
+INSERT INTO products (product_id, name, sku, price, image) VALUES
+(1, 'Iphone', 'IPHO001', '400.00', 'images/iphone.jpg'),
+(2, 'Camera', 'CAME001', '700.00', 'images/camera.jpg'),
+(3, 'Watch', 'WATC001', '100.00', 'images/watch.jpg');
 
 
