@@ -47,6 +47,7 @@ $(document).ready(function() {
 
             // Show successfully for submit message
             console.log("sucess");
+            window.parent.document.getElementById('iframe_a').href = "http://localhost/Commerce-shopping-cart/html/confirmation_page.html" 
         });
 
         /* On failure of request this function will be called  */

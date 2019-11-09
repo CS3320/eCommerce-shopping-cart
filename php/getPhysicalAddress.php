@@ -11,7 +11,7 @@ if($_POST['yes']){
     if ($con->connect_error) {
         die("Connection failed: " . $con->connect_error);
     }
-    $sql="SELECT address1 FROM userinformation";
+    $sql="SELECT * FROM userinformation WHERE '$_POST[userID]'";
 
     $result = mysqli_query($con, $sql);
     if (!$result){
