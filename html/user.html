@@ -3,111 +3,107 @@
   <head>
     <title>User Information</title>
     <link rel="stylesheet" href="../css/main.css" />
-      <script src="../js/jquery-3.4.1.min.js" defer></script>
-      <script src="../js/script.js" defer></script>
+    <script src="../js/jquery-3.4.1.min.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/states.js" defer></script>
   </head>
-  <body>
+  <body onload="showStates()">
     <div class="background">
       <h2>User Information</h2>
-      <form action="/submit-user-info">
+      <form action="../php/postUserInfo.php" method="post">
         <label> Full Name (100 characters) </label>
 
+        <input
+          class="user-input"
+          type="text"
+          id="fullName"
+          name="fullName"
+          required
+          pattern="[a-zA-Z\s]+"
+          maxlength="100"
+        />
+        <div class="divider"></div>
 
-                <input
-                    class="user-input"
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    required
-                    pattern="[A-Za-z]+"
-                    maxlength="100"
-                />
-                <div class="divider"></div>
+        <label> Address One </label>
+        <input
+          class="user-input"
+          type="text"
+          id="addressOne"
+          name="addressOne"
+          required
+          pattern="[a-zA-Z0-9-.\s]+"
+          maxlength="100"
+        />
+        <div class="divider"></div>
 
-                <label> Address One </label>
-                <input
-                    class="user-input"
-                    type="text"
-                    id="addressOne"
-                    name="addressOne"
-                    required
-                    pattern="[a-zA-Z0-9-]+"
-                    maxlength="100"
-                />
-                <div class="divider"></div>
-
-                <label> Address Two </label>
-                <input
-                    class="user-input"
-                    type="text"
-                    id="addressTwo"
-                    name="addressTwo"
-                    pattern="[a-zA-Z0-9-]+"
-                    maxlength="100"
-                />
-                <div class="divider"></div>
-                <!--Be sure to use Google Maps Javascript API in future iterations of project 
-            https://www.quora.com/How-can-I-create-an-input-field-in-HTML-with-all-the-cities-and-states-->
-                <label> City </label>
-                <input
-                    class="user-input"
-                    type="text"
-                    id="city"
-                    name="city"
-                    pattern="[a-zA-Z]+"
-                    required
-                    maxlength="100"
-                />
-                <div class="divider"></div>
-
-
-        <!--Store state names in database and use AJAX to load in future.-->
-        <label> State </label>
-        <select id="states" name="state"></select>
+        <label> Address Two </label>
+        <input
+          class="user-input"
+          type="text"
+          id="addressTwo"
+          name="addressTwo"
+          pattern="[a-zA-Z0-9-.\s]+"
+          maxlength="100"
+        />
         <div class="divider"></div>
         
-                <label> Zip Code </label>
-                <input
-                    class="user-input"
-                    type="text"
-                    id="zipCode"
-                    name="zipCode"
-                    pattern="[a-zA-Z0-9-]+"
-                    required
-                    minlength="5"
-                    maxlength="9"
-                />
-                <div class="divider"></div>
+        <label> City </label>
+        <input
+          class="user-input"
+          type="text"
+          id="city"
+          name="city"
+          pattern="[a-zA-Z\s]+"
+          required
+          maxlength="100"
+        />
+        <div class="divider"></div>
 
-                <label> Phone Number </label>
-                <input
-                    class="user-input"
-                    title="###-###-####"
-                    placeholder=###-###-####
-                    type="tel"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    pattern="[0-9-]+"
-                    required
-                    maxlength="12"
-                />
-                <div class="divider"></div>
+        <label> State </label>
+        <select id="stateDD" name="state"></select>
+        <div class="divider"></div>
 
-                <label> Email </label>
-                <!--Use both regex and the validation method of type to give error messages.-->
-                <input
-                    class="user-input"
-                    type="email"
-                    id="email"
-                    name="email"
-                    pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                    required
-                    maxlength="100"
-                />
-                <div class="divider"></div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </body>
+        <label> Zip Code </label>
+        <input
+          class="user-input"
+          type="text"
+          id="zipCode"
+          name="zipCode"
+          pattern="[a-zA-Z0-9-]+"
+          required
+          minlength="5"
+          maxlength="9"
+        />
+        <div class="divider"></div>
+
+        <label> Phone Number </label>
+        <input
+          class="user-input"
+          title="###-###-####"
+          placeholder="###-###-####"
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          pattern="[0-9-]+"
+          required
+          maxlength="12"
+        />
+        <div class="divider"></div>
+
+        <label> Email </label>
+        <!--Use both regex and the validation method of type to give error messages.-->
+        <input
+          class="user-input"
+          type="email"
+          id="email"
+          name="email"
+          required
+          maxlength="100"
+        />
+        <div class="divider"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
   <footer><!--Benjamin Bond--></footer>
 </html>

@@ -3,16 +3,18 @@
   <head>
     <title>Shipping Information</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/jquery-3.4.1.min.js" defer></script>
+    <script src="../js/states.js" defer></script>
   </head>
-  <body>
+  <body onload="showStates()">
     <div class="background">
       <h2>Shipping Information</h2>
-      <form action="/shippingInfo">
-        <label> Use Physical Address? </label>
+      <label> Use Physical Address? </label>
         <!--use this checkbox to prepoulate data (if checked) in the future-->
+        <form action="../php/getPhysicalAddress.php" method="get">
         <input type="checkbox" id="yes" name="yes" />
+        </form>
+      <form action="../php/postShippingInfo.php" method="post">
 
         <div class="divider"></div>
         <label> Address One: </label>
@@ -21,7 +23,7 @@
           id="addressOne"
           name="addressOne"
           required
-          pattern="[a-zA-Z0-9-]+"
+          pattern="[a-zA-Z0-9-\s]+"
           maxlength="100"
         />
 
@@ -29,9 +31,9 @@
         <label> Address Two: </label>
         <input
           type="text"
-          id="addressOne"
-          name="addressOne"
-          pattern="[a-zA-Z0-9-]+"
+          id="addressTwo"
+          name="addressTwo"
+          pattern="[a-zA-Z0-9-.\s]+"
           maxlength="100"
         />
 
@@ -41,16 +43,14 @@
           type="text"
           id="city"
           name="city"
-          pattern="[a-zA-Z]+"
+          pattern="[a-zA-Z\s]+"
           required
           maxlength="100"
         />
 
         <div class="divider"></div>
         <label> State: </label>
-        <!--use AJAX to load databse in the future-->
-        <select id="states" name="state">
-        </select>
+        <select id="stateDD" name="stateDD"> </select>
 
         <div class="divider"></div>
         <label> Zip Code: </label>
