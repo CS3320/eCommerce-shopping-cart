@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="../css/main_page.css" />
+  <script src="../js/jquery-3.4.1.min.js"></script>          
+  <script type="text/javascript">
+    // Check if the page has loaded completely                                         
+    $(document).ready( function() { 
+        $('#some_id').load('../test.php'); 
+        console.log("loading test.php");
+    }); 
+</script> 
 </head>
 <body>
   <header>
