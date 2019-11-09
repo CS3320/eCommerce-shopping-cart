@@ -1,7 +1,7 @@
 <?php
 
 if($_POST['yes']){
-    
+
     $servername = 'localhost';
     $user = 'root';
     $pass = '';
@@ -18,7 +18,11 @@ if($_POST['yes']){
         printf("Error: %s\n", mysqli_error($con));
         exit();
     }
-        $returnStates = 
+    $returnAddress = '[';
+    $columnmysqli_fetch_array($result)
+    while($row = mysqli_fetch_array($result)) {
+        $returnStates = $returnStates . "{state_abbr: \"" . $row['state_abbr'] . "\"," . "state_name: \"" . $row['state_name'] . "\"},";
+    }
         
     echo $returnStates;
     //return $returnStates;
