@@ -2,7 +2,7 @@
 
 $servername = 'localhost';
 $user = 'root';
-$pass = '';
+$pass = '89.8_CapVB1';
 $db = 'cs3320';
 
 
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql="INSERT INTO cs3320.shippinginformation (address1, address2, city, state, zip) 
+$sql="INSERT INTO cs3320.shippingInformation (address1, address2, city, state, zip) 
 VALUES ('$_POST[addressOne]','$_POST[addressTwo]', 
 '$_POST[city]', '$_POST[stateDD]', '$_POST[zipCode]')";
 

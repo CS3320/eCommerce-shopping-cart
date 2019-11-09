@@ -2,7 +2,7 @@
 
 $servername = 'localhost';
 $user = 'root';
-$pass = '';
+$pass = '89.8_CapVB1';
 $db = 'cs3320';
 
 
@@ -15,6 +15,16 @@ $sql="INSERT INTO cs3320.userinformation (fullName, address1, address2, city, st
 VALUES ('$_POST[fullName]','$_POST[addressOne]','$_POST[addressTwo]', 
 '$_POST[city]', '$_POST[state]', '$_POST[zipCode]', '$_POST[phoneNumber]', '$_POST[email]')";
 
+$sql2="SELECT userID FROM userinformation WHERE email = '$_POST[email]' ";
+
+if (!mysqli_query($conn,$sql2))
+  {
+      die('Error: ' . mysqli_error($conn));
+      print_r($_POST);
+  }
+
+  $_SESSION["userID"] = mysqli_fetch_array($sql2);
+  
 
 if (!mysqli_query($conn,$sql))
   {

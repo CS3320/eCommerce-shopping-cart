@@ -2,7 +2,7 @@
 
 $servername = 'localhost';
 $user = 'root';
-$pass = '';
+$pass = '89.8_CapVB1';
 $db = 'cs3320';
    
 $con = new mysqli($servername, $user, $pass, $db) or die("Unable to connect");

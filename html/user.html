@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +12,9 @@
     <script src="../js/states.js" defer></script>
   </head>
   <body onload="showStates()">
+    <?php 
+      $_SESSION["userID"];
+    ?>
     <div class="background">
       <h2>User Information</h2>
       <form action="../php/postUserInfo.php" method="post">
@@ -46,7 +53,7 @@
           maxlength="100"
         />
         <div class="divider"></div>
-        
+
         <label> City </label>
         <input
           class="user-input"
