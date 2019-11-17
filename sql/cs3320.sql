@@ -17,14 +17,18 @@ CREATE TABLE IF NOT EXISTS cs3320.Orders (
   productID INT(10) UNSIGNED NOT NULL,
   quantity VARCHAR(45) NOT NULL,
   totalPrice DOUBLE NOT NULL,
-  PRIMARY KEY (userID, orderNumber, productID, quantity, totalPrice));
+  PRIMARY KEY (orderNumber, productID, quantity, totalPrice),
+  FOREIGN KEY (userID)
+  REFERENCES UserInformation(userID));
 
 CREATE TABLE IF NOT EXISTS cs3320.PaymentInformation (
   userID INT(10) UNSIGNED NOT NULL,
   cardType VARCHAR(45) NOT NULL,
   cardNumber BIGINT(16) NOT NULL,
   expDate INT(16) NOT NULL,
-  PRIMARY KEY (userID, cardType, cardNumber, expDate));
+  PRIMARY KEY (cardType, cardNumber, expDate),
+  FOREIGN KEY (userID)
+  REFERENCES UserInformation(userID));
 
 CREATE TABLE IF NOT EXISTS cs3320.ShippingInformation (
   userID INT(10) UNSIGNED NOT NULL,
@@ -33,7 +37,9 @@ CREATE TABLE IF NOT EXISTS cs3320.ShippingInformation (
   city VARCHAR(45) NOT NULL,
   state VARCHAR(45) NOT NULL,
   zip INT(11) NOT NULL,
-  PRIMARY KEY (userID, address1, address2, city, state, zip));
+  FOREIGN KEY (userID, address1, address2, city, state, zip)
+  REFERENCES UserInformation(userID, address1, address2, city, state, zip));
+
 
 CREATE TABLE IF NOT EXISTS cs3320.UserInformation(
     userID INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -45,14 +51,16 @@ CREATE TABLE IF NOT EXISTS cs3320.UserInformation(
     zip INT(9) NOT NULL,
     phone VARCHAR(12) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    PRIMARY KEY(userID, email),
+    PRIMARY KEY(userID, email, userID, address1, address2, city, state, zip),
     UNIQUE KEY(email));
 
 CREATE TABLE IF NOT EXISTS cs3320.UserCredentials (
   userID INT(10) UNSIGNED NOT NULL,
   username VARCHAR(100) NOT NULL,
   password VARCHAR(50) NOT NULL,
-  PRIMARY KEY (userID, username, password));
+  PRIMARY KEY (username, password),
+  FOREIGN KEY (userID)
+  REFERENCES UserInformation(userID));
 
 CREATE TABLE IF NOT EXISTS cs3320.states (
   state_id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'PK: State ID',
