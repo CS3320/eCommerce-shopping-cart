@@ -9,10 +9,13 @@ function getPhysicalAddress() {
   }
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var obj = eval(xmlhttp.responseText);
-      console.log(obj.class());
-      var addressOne = document.getElementById("addressOne");
-      addressOne.innerHTML = obj[0].address1;
+      var obj = JSON.parse(this.responseText);
+      var form = document.forms["shippingInfoForm"];
+      form.elements["addressOne"].value = obj["address1"];
+      form.elements["addressTwo"].value = obj["address2"];
+      form.elements["city"].value = obj["city"];
+      form.elements["stateDD"].value = obj["state"];
+      form.elements["zipCode"].value = obj["zip"];
     }
   };
   xmlhttp.open("GET", "../php/getPhysicalAddress.php", true);

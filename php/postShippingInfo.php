@@ -23,7 +23,7 @@ if (!mysqli_query($conn,$sql))
   }
   else {
     //print_r($_POST);
-    print "<h2> Information saved! </h2> <br>";
+    print "<h2> <font face = 'Arial'>  Information saved! </h2> </font> <br>";
   }
  
 mysqli_close($conn);
