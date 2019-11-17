@@ -15,6 +15,8 @@ $sql="INSERT INTO cs3320.userinformation (fullName, address1, address2, city, st
 VALUES ('$_POST[fullName]','$_POST[addressOne]','$_POST[addressTwo]', 
 '$_POST[city]', '$_POST[state]', '$_POST[zipCode]', '$_POST[phoneNumber]', '$_POST[email]')";
 
+print "<h2> Information saved! </h2> <br>";
+
 
 
 

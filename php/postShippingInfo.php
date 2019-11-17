@@ -22,8 +22,8 @@ if (!mysqli_query($conn,$sql))
       print_r($_POST);
   }
   else {
-    print_r($_POST);
-    echo "<br Successfully input your information />";
+    //print_r($_POST);
+    print "<h2> Information saved! </h2> <br>";
   }
  
 mysqli_close($conn);
