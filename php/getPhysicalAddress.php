@@ -11,20 +11,22 @@ if($_POST['yes']){
     if ($con->connect_error) {
         die("Connection failed: " . $con->connect_error);
     }
-    $sql="SELECT * FROM userinformation WHERE '$_POST[userID]'";
+    $sql="SELECT address1, address2, city, state, zip FROM userinformation WHERE userID = 1";
 
     $result = mysqli_query($con, $sql);
     if (!$result){
         printf("Error: %s\n", mysqli_error($con));
         exit();
     }
-    $returnAddress = '[';
-    $columnmysqli_fetch_array($result)
-    while($row = mysqli_fetch_array($result)) {
-        $returnStates = $returnStates . "{state_abbr: \"" . $row['state_abbr'] . "\"," . "state_name: \"" . $row['state_name'] . "\"},";
+    $returnAddress = "[";
+    
+    $row = mysqli_fetch_array($result) 
+    {
+        $returnAddress = $returnAddress . "{address1: \"" . $row['address1'] . "\"," . "address2: \"" . $row['address2'] . "\"," . "city: \"" . $row['city'] . "\"," . "state: \"" . $row['state'] . "\"," . "zip:  \"" . $row['zip'] . "\""},";
     }
-        
-    echo $returnStates;
+     $returnAddress = $returnAddress . "]";   
+    
+     echo $returnAddress;
     //return $returnStates;
     mysqli_close($con);
 }
