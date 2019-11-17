@@ -55,6 +55,7 @@ $products = $stmt->fetchAll();
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="./js/shopping_cart.js" defer></script>
 </head>
 <body style="background-color:MintCream">
 <div class="container" style="width:600px;">
@@ -63,7 +64,10 @@ $products = $stmt->fetchAll();
     <div class="container-fluid pull-left" style="width:300px;">
       <div class="navbar-header"> <a class="navbar-brand" href="#" style="color:#FFFFFF;">Shopping Cart</a> </div>
     </div>
-    <div class="pull-right" style="margin-top:7px;margin-right:7px;"><a href="shopping-cart.php?action=emptyall" class="btn btn-info">Empty cart</a></div>
+    <div class="pull-right" style="margin-top:7px;margin-right:7px;">
+      <a href="shopping-cart.php?action=emptyall" class="btn btn-info">Empty cart</a>
+      <a href="./html/checkout.html" class="btn btn-info">Checkout</a>
+      </div>
   </nav>
   <table class="table table-striped">
     <thead>
@@ -103,7 +107,7 @@ $products = $stmt->fetchAll();
             <p style="text-align:center;color:#04B745;"><b>$<?php print $product['price']?></b></p>
             <form method="post" action="shopping-cart.php?action=addcart">
               <p style="text-align:center;color:#04B745;">
-                <button type="submit" class="btn btn-warning">Add To Cart</button>
+                <button id="checkoutButton" type="submit" class="btn btn-warning">Add To Cart</button>
                 <input type="hidden" name="sku" value="<?php print $product['sku']?>">
               </p>
             </form>

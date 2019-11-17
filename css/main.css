@@ -2,6 +2,7 @@
 /* Reminder to devs: can use Ctrl + e to open built in color selector in brackets*/
 body {
   font-family: "Lato", sans-serif;
+  position: relative;
 }
 
 h2 {
@@ -47,6 +48,19 @@ select {
   border-left: none;
   float: left;
 }
+.user-input{
+  padding: 1px;
+  margin-top: 8px;
+  margin-left: 0px;
+  margin-bottom: 8px;
+  max-width: 40%;
+  border-color: #cecece;
+  border: 1px outset;
+  border-top: none;
+  border-left: none;
+  float: right;
+}
+
 
 button {
   display: block;
@@ -129,3 +143,44 @@ li.checkout-list {
   text-align: center;
   justify-content: center;
 }
+.userImage{
+  background-image: url("../images/user.png");
+  position: relative;
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+  height: 230px;
+  left: 10%;
+  width: 230px;
+  animation: .5s ease-out 0s 1 slideInFromLeft;
+  opacity: .9;
+  float: left;
+  
+}
+.image_wrapper {
+  display: inline-block;
+  margin-right: 0px !important;
+  height: 329px;
+  width: 300px;
+}
+.user_wrapper {
+  display: inline-block;
+  position: relative;
+  float: center;
+}
+
+.whole_nav>li+li:before {
+  content: "\00BB";
+}
+
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+

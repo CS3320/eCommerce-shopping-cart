@@ -7,102 +7,107 @@
     <script src="../js/script.js" defer></script>
     <script src="../js/states.js" defer></script>
   </head>
-  <body onload="showStates()">
+  <body class="user" onload="showStates()">
     <div class="background">
-      <h2>User Information</h2>
-      <form action="../php/postUserInfo.php" method="post">
-        <label> Full Name (100 characters) </label>
+      <div class="image_wrapper">
+      <div class="userImage"></div>
+      </div>
+        <div class="user_wrapper">
+        <h2>User Information</h2>
+        <form action="../php/postUserInfo.php" method="post">
+          <label> Full Name </label>
 
-        <input
-          class="user-input"
-          type="text"
-          id="fullName"
-          name="fullName"
-          required
-          pattern="[a-zA-Z\s]+"
-          maxlength="100"
-        />
-        <div class="divider"></div>
+          <input
+            class="user-input"
+            type="text"
+            id="fullName"
+            name="fullName"
+            required
+            pattern="[a-zA-Z\s]+"
+            maxlength="100"
+          />
+          <div class="divider"></div>
 
-        <label> Address One </label>
-        <input
-          class="user-input"
-          type="text"
-          id="addressOne"
-          name="addressOne"
-          required
-          pattern="[a-zA-Z0-9-.\s]+"
-          maxlength="100"
-        />
-        <div class="divider"></div>
+          <label> Address One </label>
+          <input
+            class="user-input"
+            type="text"
+            id="addressOne"
+            name="addressOne"
+            required
+            pattern="[a-zA-Z0-9-.\s]+"
+            maxlength="100"
+          />
+          <div class="divider"></div>
 
-        <label> Address Two </label>
-        <input
-          class="user-input"
-          type="text"
-          id="addressTwo"
-          name="addressTwo"
-          pattern="[a-zA-Z0-9-.\s]+"
-          maxlength="100"
-        />
-        <div class="divider"></div>
-        
-        <label> City </label>
-        <input
-          class="user-input"
-          type="text"
-          id="city"
-          name="city"
-          pattern="[a-zA-Z\s]+"
-          required
-          maxlength="100"
-        />
-        <div class="divider"></div>
+          <label> Address Two </label>
+          <input
+            class="user-input"
+            type="text"
+            id="addressTwo"
+            name="addressTwo"
+            pattern="[a-zA-Z0-9-.\s]+"
+            maxlength="100"
+          />
+          <div class="divider"></div>
 
-        <label> State </label>
-        <select id="stateDD" name="state"></select>
-        <div class="divider"></div>
+          <label> City </label>
+          <input
+            class="user-input"
+            type="text"
+            id="city"
+            name="city"
+            pattern="[a-zA-Z\s]+"
+            required
+            maxlength="100"
+          />
+          <div class="divider"></div>
 
-        <label> Zip Code </label>
-        <input
-          class="user-input"
-          type="text"
-          id="zipCode"
-          name="zipCode"
-          pattern="[a-zA-Z0-9-]+"
-          required
-          minlength="5"
-          maxlength="9"
-        />
-        <div class="divider"></div>
+          <label> State </label>
+          <select class= "user-input" id="stateDD" name="state"></select>
+          <div class="divider"></div>
 
-        <label> Phone Number </label>
-        <input
-          class="user-input"
-          title="###-###-####"
-          placeholder="###-###-####"
-          type="tel"
-          id="phoneNumber"
-          name="phoneNumber"
-          pattern="[0-9-]+"
-          required
-          maxlength="12"
-        />
-        <div class="divider"></div>
+          <label> Zip Code </label>
+          <input
+            class="user-input"
+            type="text"
+            id="zipCode"
+            name="zipCode"
+            pattern="[a-zA-Z0-9-]+"
+            required
+            minlength="5"
+            maxlength="9"
+          />
+          <div class="divider"></div>
 
-        <label> Email </label>
-        <!--Use both regex and the validation method of type to give error messages.-->
-        <input
-          class="user-input"
-          type="email"
-          id="email"
-          name="email"
-          required
-          maxlength="100"
-        />
-        <div class="divider"></div>
-        <button type="submit">Submit</button>
-      </form>
+          <label> Phone Number </label>
+          <input
+            class="user-input"
+            title="###-###-####"
+            placeholder="###-###-####"
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            pattern="[0-9-]+"
+            required
+            maxlength="12"
+          />
+          <div class="divider"></div>
+
+          <label> Email </label>
+          <!--Use both regex and the validation method of type to give error messages.-->
+          <input
+            class="user-input"
+            type="email"
+            id="email"
+            name="email"
+            required
+            maxlength="100"
+          />
+          <div class="divider"></div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   </body>
   <footer><!--Benjamin Bond--></footer>
