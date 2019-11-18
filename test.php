@@ -27,7 +27,7 @@ if ($conn2->connect_error) {
     die("Connection failed: " . $conn2->connect_error);
 }
 
-$init = file_get_contents("sql\cs3320.sql");
+$init = file_get_contents("sql/cs3320.sql");
 
 //$sql = file_get_contents('sql/cs3320.sql');
 

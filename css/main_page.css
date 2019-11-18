@@ -77,6 +77,17 @@ a:focus{
 .wrapper {
     background: MintCream;
 }
+
+:before {
+    box-sizing: border-box;
+}
+
+nav > ul > li+li+li::before {
+    content: "\00BB";
+    padding: 0 5px;
+    color: #ccc;
+}
+  
 footer {
     font-weight: 100;
     opacity: 0.5;
@@ -84,3 +95,4 @@ footer {
     width: 100w;
     height: 10vh;
 }
+
