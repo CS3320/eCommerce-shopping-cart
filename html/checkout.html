@@ -4,12 +4,12 @@
 <head>
     <link rel="stylesheet" href="../css/main.css"/>
     <script src="../js/jquery-3.4.1.min.js" defer></script>
-    <!--<script src="../js/script.js" defer></script>-->
-    <script src="../js/new_checkout.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/checkout.js" defer></script>
     <title> Checkout </title>
 </head>
 
-<body onload="getCheckoutInfo()">
+<body>
 
 <div class="background">
     <div class= "content_wrapper">
@@ -18,20 +18,24 @@
 
     <h2 id="summary"> Order Summary</h2>
 
-    <ul>
+    <!-- <ul> -->
 
-
-        <li class="checkout-list" id="itemCount"> Items: </li>
-        <li class="checkout-list" id="shippingAndHandling"> Shipping & Handling:</li>
+        <form id="submitPayment" action="../html/confirmation_page.html">
+        <label> Items:</label> <input readonly="readonly" id="itemCount" name="itemCount"/> </li>
+        <label>Shipping & Handling: $</label> <input readonly="readonly" id="shippingAndHandling"/> </li>
+        <label>Total before tax: $</label> <input readonly="readonly" id="totalBeforeTax" /> </li>
+        <label>Estimated Tax: $</label> <input readonly="readonly" id="estimatedTax" /> </li>
+        <label> Order Total: $</label> <input readonly="readonly" id="orderTotal" name="orderTotal"> 
+        <!-- <li class="checkout-list" id="itemCount"> Items: </li> -->
+        <!-- <li class="checkout-list" id="shippingAndHandling"> Shipping & Handling:</li>
         <li class="checkout-list" id="totalBeforeTax"> Total before tax:</li>
         <li class="checkout-list" id="estimatedTax"> Estimated tax:</li>
-        <li class="checkout-list" id="orderTotal"> Order Total:</li>
+        <li class="checkout-list" id="orderTotal"> Order Total:</li> -->
 
 
-    </ul>
+    <!-- </ul> -->
 
     <div id="paymentInfo">
-        <form id="submitPayment" action="../html/confirmation_page.html">
             <h2>Payment Information</h2>
             <label for="payment_type"> Payment Type:</label>
             <select id="payment_type" name="payment_type">

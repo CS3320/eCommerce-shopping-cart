@@ -56,7 +56,7 @@ $products = $stmt->fetchAll();
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body style="background-color:MintCream">
+<body style=" background-color:MintCream; background-image: url(./images/t5.png); background-size:100% 100%; background-repeat: round; width: 1037x; height: 1091.19px; overflow: hidden;">
 <div class="container" style="width:600px;">
   <?php if(!empty($_SESSION['products'])):?>
   <nav class="navbar navbar-inverse" style="background:#1abc9c;">
@@ -120,27 +120,18 @@ $products = $stmt->fetchAll();
 </body>
 <script>
  var itemCount = 0;
- var totalPrice = 0;
- var shippingHandling = 0;
- var totalBeforeTax = 0;
- var estimatedTax = 0;
  var orderTotal = 0;
- var runningTotal = 0;
  var session = eval('(<?php echo json_encode($_SESSION)?>)');
  var obj = eval(session.products);
- //console.log(session);
- for (var key in obj) {
-        if (obj.hasOwnProperty(key)) { 
-          console.log(`${key} : ${obj[key]}`)
-        }
-        orderTotal = orderTotal + key.qty * parseInt(key.price);
-      }
 
 Object.values(obj).forEach(value=>{
-   orderTotal = orderTotal + value.qty * parseInt(value.price.replace("$",""));
-   console.log(value.qty);
+   orderTotal = orderTotal + value.qty * parseInt(value.price);
+   itemCount = itemCount + value.qty;
+   console.log(value.price);
 });
 
+localStorage.setItem("totalPrice", orderTotal);
+localStorage.setItem("itemCount", itemCount );
 console.log(orderTotal);
 
 </script>

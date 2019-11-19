@@ -12,18 +12,18 @@ CREATE TABLE IF NOT EXISTS products (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS cs3320.Orders (
-  userID INT(10) UNSIGNED NOT NULL,
-  orderNumber INT(10) UNSIGNED NOT NULL,
+  userID INT(10) UNSIGNED,
+  orderNumber INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   productID INT(10) UNSIGNED NOT NULL,
   quantity VARCHAR(45) NOT NULL,
   totalPrice DOUBLE NOT NULL,
-  PRIMARY KEY (userID, orderNumber, productID, quantity, totalPrice));
+  PRIMARY KEY (orderNumber));
 
 CREATE TABLE IF NOT EXISTS cs3320.PaymentInformation (
   userID INT(10) UNSIGNED NOT NULL,
   cardType VARCHAR(45) NOT NULL,
   cardNumber BIGINT(16) NOT NULL,
-  expDate INT(16) NOT NULL,
+  expDate VARCHAR(45) NOT NULL,
   PRIMARY KEY (userID, cardType, cardNumber, expDate));
 
 CREATE TABLE IF NOT EXISTS cs3320.ShippingInformation (
@@ -58,7 +58,9 @@ CREATE TABLE IF NOT EXISTS cs3320.states (
   state_id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'PK: State ID',
   state_abbr VARCHAR(8) NULL DEFAULT NULL COMMENT 'Optional state abbreviation (US 2 cap letters)',
   state_name VARCHAR(32) NOT NULL COMMENT 'State name with first letter capital',
-  PRIMARY KEY (state_id));
+  PRIMARY KEY (state_id),
+  UNIQUE KEY state_abbr (state_abbr)
+  );
 
 
 INSERT into states (state_abbr, state_name) values ('AL', 'Alabama'),

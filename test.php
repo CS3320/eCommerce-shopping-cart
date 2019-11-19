@@ -14,8 +14,8 @@ if ($conn->connect_error) {
 $database = "CREATE SCHEMA IF NOT EXISTS cs3320";
 
 if ($conn->query($database) === TRUE) {
-    echo "Database cs3320 created successfully";
-    echo "<br/>";
+    // echo "Database cs3320 created successfully";
+    // echo "<br/>";
 } else {
     echo "Error creating database: " . $conn->error;
 }
@@ -32,8 +32,8 @@ $init = file_get_contents("sql/cs3320.sql");
 //$sql = file_get_contents('sql/cs3320.sql');
 
 if ($conn2->multi_query($init) === TRUE) {
-    echo "Data tables for cs3320 created successfully";
-    echo "<br/>";
+    // echo "Data tables for cs3320 created successfully";
+    // echo "<br/>";
 } else {
     echo "Error creating tables: " . $conn2->error;
 }

@@ -5,7 +5,7 @@
   <script type="text/javascript">
     // Check if the page has loaded completely                                         
     $(document).ready( function() { 
-        $('#some_id').load('../test.php'); 
+        $('#loader').load('../test.php'); 
         console.log("loading test.php");
     }); 
 </script> 
@@ -39,7 +39,6 @@
         </li>
       </ul>
     </nav>
-
     <div class="wrapper">
       <div class="iframe-container">
         <iframe name="iframe_a" id="iframe_a"></iframe>
@@ -47,4 +46,5 @@
       <footer>Created by Siri Sjoboen, Benjamin Bond, and Evan Estrada</footer>
     </div>
 </body>
+<p style="width: 0; height: 0; visibility: hidden;" id="loader"></p>
 </html>

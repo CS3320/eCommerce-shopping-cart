@@ -48,6 +48,26 @@ select {
   border-left: none;
   float: left;
 }
+input.no_appearance{
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100px;
+    max-width: 100px;
+    border: none;
+    float: right;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: block;
+    text-align: start;
+    background-color: white;
+
+}
 .user-input{
   padding: 1px;
   margin-top: 8px;
@@ -125,6 +145,8 @@ th {
 
 li.checkout-list {
   padding: 0px;
+  max-width: 5000px;
+  max-height: 64px;
 }
 #cartform {
   float: left;
@@ -153,8 +175,9 @@ li.checkout-list {
   left: 10%;
   top: 10%;
   width: 230px;
-  animation: .5s ease-out 0s 1 slideInFromLeft;
-  opacity: .9;
+  animation: .5s ease-out 0s 1 loadIn forwards;
+  animation-delay: .1s;
+  opacity: .2;
   float: left;
   
 }
@@ -188,6 +211,7 @@ li.checkout-list {
 .content_wrapper {
   border: 2px solid grey;
   padding: 20px;
+  min-width: 436px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   position: absolute;
@@ -197,6 +221,16 @@ li.checkout-list {
 }
 
 
+@keyframes loadIn {
+  0% {
+    opacity: .2;
+    /* transform: translateX(-300%); */
+  }
+  100% {
+    opacity: .9;
+    /* transform: translateX(0%); */
+  }
+}
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-300%);
