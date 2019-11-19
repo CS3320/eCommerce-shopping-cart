@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 @import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap');
+
 .header {
     display: inline-block;
     padding: 20px;
@@ -11,6 +15,9 @@
     background: #1abc9c;
     font-size: 20px;
     clear: both;
+}
+#webtitle{
+    font-family: 'Petit Formal Script', cursive;
 }
 h1 {
     margin-top: 5px;

@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS cs3320.PaymentInformation (
   PRIMARY KEY (userID, cardType, cardNumber, expDate));
 
 CREATE TABLE IF NOT EXISTS cs3320.ShippingInformation (
-  userID INT(10) UNSIGNED NOT NULL,
+  userID INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   address1 VARCHAR(100) NOT NULL,
   address2 VARCHAR(45) NOT NULL,
   city VARCHAR(45) NOT NULL,

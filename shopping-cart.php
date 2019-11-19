@@ -59,7 +59,7 @@ $products = $stmt->fetchAll();
 <body style=" background-color:MintCream; background-image: url(./images/t5.png); background-size:100% 100%; background-repeat: round; width: 1037x; height: 1091.19px; overflow: hidden;">
 <div class="container" style="width:600px;">
   <?php if(!empty($_SESSION['products'])):?>
-  <nav class="navbar navbar-inverse" style="background:#1abc9c;">
+  <nav class="navbar navbar-inverse" style="background:#1abc9c; margin-top: 15px;">
     <div class="container-fluid pull-left" style="width:300px;">
       <div class="navbar-header"> <a class="navbar-brand" href="#" style="color:#FFFFFF;">Shopping Cart</a> </div>
     </div>
@@ -91,7 +91,7 @@ $products = $stmt->fetchAll();
     <tr><td colspan="5" align="right"><h4>Total:$<?php print $total?></h4></td></tr>
   </table>
   <?php endif;?>
-  <nav class="navbar navbar-inverse" style="background:#1abc9c;">
+  <nav class="navbar navbar-inverse" style="background:#1abc9c; margin: 15px;">
     <div class="container-fluid">
       <div class="navbar-header"> <a class="navbar-brand" href="#" style="color:#FFFFFF;">Products</a> </div>
     </div>
