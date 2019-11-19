@@ -55,7 +55,6 @@ $products = $stmt->fetchAll();
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="./js/shopping_cart.js" defer></script>
 </head>
 <body style="background-color:MintCream">
 <div class="container" style="width:600px;">
@@ -126,16 +125,23 @@ $products = $stmt->fetchAll();
  var totalBeforeTax = 0;
  var estimatedTax = 0;
  var orderTotal = 0;
+ var runningTotal = 0;
  var session = eval('(<?php echo json_encode($_SESSION)?>)');
- var arrayOfProducts = session.products;
+ var obj = eval(session.products);
  //console.log(session);
- for (var prop in arrayOfProducts) {
-        if (arrayOfProducts.hasOwnProperty(prop)) { 
-          console.log(prop);
-
+ for (var key in obj) {
+        if (obj.hasOwnProperty(key)) { 
+          console.log(`${key} : ${obj[key]}`)
         }
+        orderTotal = orderTotal + key.qty * parseInt(key.price);
       }
- console.log(arrayOfProducts);
+
+Object.values(obj).forEach(value=>{
+   orderTotal = orderTotal + value.qty * parseInt(value.price.replace("$",""));
+   console.log(value.qty);
+});
+
+console.log(orderTotal);
 
 </script>
 </html>
