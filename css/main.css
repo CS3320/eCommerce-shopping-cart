@@ -157,6 +157,22 @@ li.checkout-list {
   float: left;
   
 }
+.shippingImage{
+  background: url("../images/newbox.png");
+  position: relative;
+  background-repeat:no-repeat;
+  background-size: contain;
+  margin-top: 20px;
+  height: 250px;
+  top: 30%;
+  left: 10%;
+  width: 250px;
+  animation: .5s ease-out 0s 1 slideInFromLeft;
+  opacity: .9;
+  float: left;
+  margin-bottom: 0px;
+  
+}
 .image_wrapper {
   display: inline-block;
   margin-right: 0px !important;
@@ -168,11 +184,6 @@ li.checkout-list {
   position: relative;
   float: center;
 }
-
-.whole_nav>li+li:before {
-  content: "\00BB";
-}
-
 
 
 @keyframes slideInFromLeft {

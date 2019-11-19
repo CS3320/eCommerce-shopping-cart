@@ -20,7 +20,7 @@ if($action=='addcart' && $_SERVER['REQUEST_METHOD']=='POST') {
 	
 	$currentQty = $_SESSION['products'][$_POST['sku']]['qty']+1; //Incrementing the product qty in cart
 	$_SESSION['products'][$_POST['sku']] =array('qty'=>$currentQty,'name'=>$product['name'],'image'=>$product['image'],'price'=>$product['price']);
-	$product='';
+  $product='';
 	header("Location:shopping-cart.php");
 }
 //Empty All
@@ -87,7 +87,7 @@ $products = $stmt->fetchAll();
       <td><?php print $product['qty']?></td>
       <td><a href="shopping-cart.php?action=empty&sku=<?php print $key?>" class="btn btn-info">Delete</a></td>
     </tr>
-    <?php $total = $total+$product['price'];?>
+    <?php $total = $total+$product['price']*$product['qty'];?>
     <?php endforeach;?>
     <tr><td colspan="5" align="right"><h4>Total:$<?php print $total?></h4></td></tr>
   </table>
@@ -119,4 +119,23 @@ $products = $stmt->fetchAll();
   </div>
 </div>
 </body>
+<script>
+ var itemCount = 0;
+ var totalPrice = 0;
+ var shippingHandling = 0;
+ var totalBeforeTax = 0;
+ var estimatedTax = 0;
+ var orderTotal = 0;
+ var session = eval('(<?php echo json_encode($_SESSION)?>)');
+ var arrayOfProducts = session.products;
+ //console.log(session);
+ for (var prop in arrayOfProducts) {
+        if (arrayOfProducts.hasOwnProperty(prop)) { 
+          console.log(prop);
+
+        }
+      }
+ console.log(arrayOfProducts);
+
+</script>
 </html>
