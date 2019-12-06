@@ -1,5 +1,5 @@
 <?php 
-
+header( "Location: ../shopping-cart.php");
 $servername = 'localhost';
 $user = 'root';
 $pass = '';

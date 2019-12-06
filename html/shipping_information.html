@@ -11,78 +11,83 @@
     <div class="background">
       <div class="content_wrapper">
         <div class="image_wrapper">
-            <div class="shippingImage"></div>
+          <div class="shippingImage"></div>
         </div>
-      <div class="user_wrapper">
-      <h2>Shipping Information</h2>
-      <label> Use Physical Address? </label>
-      <form action="../php/getPhysicalAddress.php" method="get">
-        <input
-          type="checkbox"
-          id="yes"
-          name="yes"
-          onclick="getPhysicalAddress()"
-        />
-      </form>
+        <div class="user_wrapper">
+          <h2>Shipping Information</h2>
+          <label> Use Physical Address? </label>
+          <form action="../php/getPhysicalAddress.php" method="get">
+            <input
+              type="checkbox"
+              id="yes"
+              name="yes"
+              onclick="getPhysicalAddress()"
+            />
+          </form>
 
-      <form
-        action="../php/postShippingInfo.php"
-        method="post"
-        id="shippingInfoForm"
-      >
-        <div class="divider"></div>
-        <label> Address One: </label>
-        <input
-          type="text"
-          id="addressOne"
-          name="addressOne"
-          required
-          pattern="[a-zA-Z0-9-\s]+"
-          maxlength="100"
-        />
+          <form
+            action="../php/postShippingInfo.php"
+            method="post"
+            id="shippingInfoForm"
+          >
+            <div class="divider"></div>
+            <label> Address One: </label>
+            <input
+              type="text"
+              id="addressOne"
+              name="addressOne"
+              required
+              pattern="[a-zA-Z0-9-\s]+"
+              maxlength="100"
+            />
 
-        <div class="divider"></div>
-        <label> Address Two: </label>
-        <input
-          type="text"
-          id="addressTwo"
-          name="addressTwo"
-          pattern="[a-zA-Z0-9-.\s]+"
-          maxlength="100"
-        />
+            <div class="divider"></div>
+            <label> Address Two: </label>
+            <input
+              type="text"
+              id="addressTwo"
+              name="addressTwo"
+              pattern="[a-zA-Z0-9-.\s]+"
+              maxlength="100"
+            />
 
-        <div class="divider"></div>
-        <label> City: </label>
-        <input
-          type="text"
-          id="city"
-          name="city"
-          pattern="[a-zA-Z\s]+"
-          required
-          maxlength="100"
-        />
+            <div class="divider"></div>
+            <label> City: </label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              pattern="[a-zA-Z\s]+"
+              required
+              maxlength="100"
+            />
 
-        <div class="divider"></div>
-        <label> State: </label>
-        <select id="stateDD" name="stateDD"> </select>
+            <div class="divider"></div>
+            <label> State: </label>
+            <select id="stateDD" name="stateDD"> </select>
 
-        <div class="divider"></div>
-        <label> Zip Code: </label>
-        <input
-          type="text"
-          id="zipCode"
-          name="zipCode"
-          pattern="[a-zA-Z0-9-]+"
-          required
-          minlength="5"
-          maxlength="9"
-        />
-        <div class="divider"></div>
-
-        <button type="submit">Submit</button>
-      </form>
+            <div class="divider"></div>
+            <label> Zip Code: </label>
+            <input
+              type="text"
+              id="zipCode"
+              name="zipCode"
+              pattern="[a-zA-Z0-9-]+"
+              required
+              minlength="5"
+              maxlength="9"
+            />
+            <div class="divider"></div>
+            <button type="submit">Submit</button><br />
+            <button
+              onclick="location.href='../shopping-cart.php'"
+              type="button"
+            >
+              Back
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   </body>
 

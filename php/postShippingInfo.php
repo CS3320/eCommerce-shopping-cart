@@ -1,5 +1,5 @@
 <?php 
-
+header("Location: ../html/checkout.html");
 $servername = 'localhost';
 $user = 'root';
 $pass = '';
