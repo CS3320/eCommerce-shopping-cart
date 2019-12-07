@@ -22,7 +22,9 @@ header("location: ../html/main_page.html");
         <label>UserName :</label>
         <input id="name" name="username" placeholder="username" type="text">
         <label>Password :</label>
-        <input id="password" name="password" placeholder="**********" type="password">
+        <input id="password" name="password" placeholder="**********" type="password"><br>
+        <label for="new"> New User?</label>
+        <input id = "new"  name = "new" type="checkbox" value="yes"> <br>
         <input name="submit" type="submit" value=" Login ">
     </div>
     <span><?php echo $error; ?></span>
