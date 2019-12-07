@@ -127,13 +127,25 @@ $products = $stmt->fetchAll();
  var orderTotal = 0;
  var session = eval('(<?php echo json_encode($_SESSION)?>)');
  var obj = eval(session.products);
-
+ console.log(session);
+ var arrayOfProducts = [];
+if(session.products.CAME001){
+  arrayOfProducts.push("CAME001");
+}
+if(session.products.IPHO001){
+  arrayOfProducts.push("IPHO001");
+}
+if(session.products.WATC001){
+  arrayOfProducts.push("WATC001");
+}
 Object.values(obj).forEach(value=>{
+   
    orderTotal = orderTotal + value.qty * parseInt(value.price);
    itemCount = itemCount + value.qty;
    console.log(value.price);
 });
-
+localStorage.setItem("arrayOfProducts", arrayOfProducts);
+console.log(localStorage.getItem('arrayOfProducts'));
 localStorage.setItem("totalPrice", orderTotal);
 localStorage.setItem("itemCount", itemCount );
 console.log(orderTotal);
