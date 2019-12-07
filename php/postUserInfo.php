@@ -1,5 +1,5 @@
 <?php 
-
+header( "Location: ../shopping-cart.php");
 $servername = 'localhost';
 $user = 'root';
 $pass = '';
@@ -15,7 +15,7 @@ $sql="INSERT INTO cs3320.userinformation (fullName, address1, address2, city, st
 VALUES ('$_POST[fullName]','$_POST[addressOne]','$_POST[addressTwo]', 
 '$_POST[city]', '$_POST[state]', '$_POST[zipCode]', '$_POST[phoneNumber]', '$_POST[email]')";
 
-print "<h2><center><font face='Arial' color='white' text-align='center' margin='100px'> Information saved! </font></center></h2> <br>";
+print "<h2><center><font face='Arial' color='black' text-align='center' margin='100px'> Information saved! </font></center></h2> <br>";
 
 
 

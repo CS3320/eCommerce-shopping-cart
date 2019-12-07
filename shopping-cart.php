@@ -65,7 +65,7 @@ $products = $stmt->fetchAll();
     </div>
     <div class="pull-right" style="margin-top:7px;margin-right:7px;">
       <a href="shopping-cart.php?action=emptyall" class="btn btn-info">Empty cart</a>
-      <a href="./html/checkout.html" class="btn btn-info">Checkout</a>
+      <a href="./html/shipping_information.html" class="btn btn-info">Checkout</a>
       </div>
   </nav>
   <table class="table table-striped">
@@ -114,6 +114,10 @@ $products = $stmt->fetchAll();
         </div>
       </div>
       <?php endforeach;?>
+      <div class = "text-center">
+        <button type = "button" class="btn btn-secondary btn-lg">
+        <a href="./html/user.html" style="color:inherit" role = "button"> Back </a>
+      </div>
     </div>
   </div>
 </div>
