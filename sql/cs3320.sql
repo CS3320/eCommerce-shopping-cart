@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS cs3320.UserCredentials (
   userID INT(10) UNSIGNED NOT NULL,
   username VARCHAR(100) NOT NULL,
   password VARCHAR(50) NOT NULL,
-  PRIMARY KEY (userID, username, password));
+  PRIMARY KEY (username));
 
 CREATE TABLE IF NOT EXISTS cs3320.states (
   state_id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'PK: State ID',
